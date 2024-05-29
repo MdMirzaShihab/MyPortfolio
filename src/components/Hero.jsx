@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
+import hero from '../assets/images/hero.jpeg';
 
 const Hero = () => {
   useEffect(() => {
-    gsap.to('#Pphoto', {
-      x: 20,
+    gsap.fromTo('.Pphoto',{
+      x: 0,
+      rotation:0,
+      borderRadius:'0%',
+    }, {
+      x: 250,
       repeat: -1,
       yoyo:true,
-      rotation:180,
-      duration:3,
-      ease: 'elastic'
+      rotation:360,
+      borderRadius:'100%',
+      duration:2,
+      ease: 'bounce.out'
     });
   }, []);
 
@@ -19,9 +25,12 @@ const Hero = () => {
         <div>
           Hero Section Text
         </div>
-        <div id='Pphoto' className='h-48 w-48 bg-blue-400 border-2'>
+        <div  className='Pphoto h-48 w-48 bg-blue-400 border-2'>
           <h1 className='text-center'>Hero section Img</h1>
+          <img src={hero} className="Pphoto h-full overflow-hidden" alt="" />
+          
         </div>
+
       </div>
     </div>
   );
