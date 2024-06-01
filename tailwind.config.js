@@ -16,6 +16,10 @@ export default {
         },
         zinc: "#101010",
       },
+      fontFamily: {
+        sans: ['Quicksand', 'sans-serif'],
+        dancing: ['Dancing Script', 'cursive'],
+      },
     },
   },
   plugins: [],

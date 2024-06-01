@@ -1,36 +1,20 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import hero from '../assets/images/hero.jpeg';
+import React from 'react';
+import hero from '../assets/HeroImg.png';
 
 const Hero = () => {
-  useEffect(() => {
-    gsap.fromTo('.Pphoto',{
-      x: 0,
-      rotation:0,
-      borderRadius:'0%',
-    }, {
-      x: 250,
-      repeat: -1,
-      yoyo:true,
-      rotation:360,
-      borderRadius:'100%',
-      duration:2,
-      ease: 'bounce.out'
-    });
-  }, []);
 
   return (
-    <div className=''> 
-      <div className='bg-gray-400 flex h-96 items-center p-4 '>
-        <div>
-          Hero Section Text
+    <div className=' bg-sky-50 flex items-center justify-center w-full'>
+      <div className='flex flex-col md:flex-row w-full'>
+        <div className='w-1/2'>
+          <img src={hero} className="object-contain w-full h-full" alt="Hero" />
         </div>
-        <div  className='Pphoto h-48 w-48 bg-blue-400 border-2'>
-          <h1 className='text-center'>Hero section Img</h1>
-          <img src={hero} className="Pphoto h-full overflow-hidden" alt="" />
-          
-        </div>
+        <div className='w-1/2'>
+          <p className='text-xl md:text-9xl font-black font-dancing mt-10 -ml-80'>Md Mirza</p>
+          <p className='text-xl md:text-5xl font-sans font-bold  -ml-40'>a Software Engineer</p>
+          <p className='text-xl md:text-2xl font-dancing'>Specializing in Frontend Development</p>
 
+        </div>
       </div>
     </div>
   );
