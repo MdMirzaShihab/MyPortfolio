@@ -25,9 +25,20 @@ const Hero = () => {
     };
 
     gsap.from('.background1', {
-      x:1500,
-      duration:1.5,
-      delay:2.5
+      x: -500,
+      duration:0.5,
+      delay:0.5
+    })
+    gsap.from('.background2', {
+      x: -500,
+      duration:0.5,
+      delay:0
+    })
+
+    gsap.from('.HeroText', {
+      x: -1500,
+      duration:1,
+      delay:1
     })
 
     const titleInterval = setInterval(changeTitle, 3000);
