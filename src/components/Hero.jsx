@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import {useGSAP} from '@gsap/react';
 import hero from '../assets/HeroImg.png';
 import heroImgbg1 from '../assets/HeroImgbg1.png';
 import heroImgbg2 from '../assets/HeroImgbg2.png';
@@ -11,7 +12,7 @@ const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(whoIam[0]);
   let titleIndex = 0;
 
-  useEffect(() => {
+  useGSAP(() => {
     // Typewriter effect for the 'whoIam' array
     const changeTitle = () => {
       gsap.to('.title', { opacity: 0, duration: 1, onComplete: updateTitle });
@@ -22,6 +23,12 @@ const Hero = () => {
       setCurrentTitle(whoIam[titleIndex]);
       gsap.to('.title', { opacity: 1, duration: 1 });
     };
+
+    gsap.from('.background1', {
+      x:1500,
+      duration:1.5,
+      delay:2.5
+    })
 
     const titleInterval = setInterval(changeTitle, 3000);
 
