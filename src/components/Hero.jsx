@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import hero from '../assets/HeroImg.png';
+import heroImgbg1 from '../assets/HeroImgbg1.png';
+import heroImgbg2 from '../assets/HeroImgbg2.png';
+
 
 const whoIam = ["Passionate Software Engineer", "Certified Scrum Master", "Aspiring Educator and Researcher"];
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(whoIam[0]);
-  const mirzaRef = useRef(null);
   let titleIndex = 0;
 
   useEffect(() => {
@@ -23,31 +25,24 @@ const Hero = () => {
 
     const titleInterval = setInterval(changeTitle, 3000);
 
-    // Sliding animation for "Md MIRZA"
-    gsap.timeline({ repeat: -1, yoyo: true })
-      .fromTo(mirzaRef.current, 
-        { x: '100%' }, 
-        { x: '0%', duration: 2, ease: 'power2.out' })
-      .to(mirzaRef.current, 
-        { x: '-100%', duration: 2, ease: 'power2.in' });
-
     return () => clearInterval(titleInterval);
   }, []);
 
   return (
-    <div className='relative bg-sky-50 flex items-center justify-center w-full'>
-      <div className='flex flex-row w-full'>
-        <div className='w-1/2 z-10'>
-          <img src={hero} className="object-contain w-full h-full" alt="Hero" />
-        </div>
-        <div className='w-1/2'>
-          <p className='text-3xl sm:text-5xl lg:text-8xl xl:text-9xl text-center mt-10 2xl:mt-28 -ml-24 sm:-ml-40 xl:-ml-60 text-slate-800 pr-10'>Md Mirza Shihab</p>
-          <p className='title text-lg sm:text-2xl lg:text-4xl 2xl:text-5xl text-center -ml-24 sm:-ml-40 xl:-ml-60 font-bold text-slate-600 pr-10'>{currentTitle}</p>
-          <p className='text-xl md:text-2xl font-dancing'>Specializing in Frontend Development</p>
-        </div>
+    <div className='flex flex-row bg-slate-400 w-full h-[700px]'>
+      {/* Container for images */}
+   
+      <div className='relative w-full h-auto'>
+        {/* Background images */}
+        <img src={heroImgbg2} className="background1 absolute left-0 top-0 w-full h-full object-cover object-top" alt="Background" />
+        <img src={heroImgbg1} className="background2 absolute left-0 top-0 w-full h-full object-cover object-top" alt="Background" />
+      <img src={hero} className="HeroImage absolute left-0 top-0 w-full h-full object-cover object-top z-10" alt="Hero" />
       </div>
-      <div ref={mirzaRef} className='absolute font-bold  text-[100px] xl:text-[300px] top-0 opacity-10 h-auto z-0'>
-        Md MIRZA
+      {/* Text content */}
+      <div className='HeroText flex flex-col w-full pt-20 lg:pt-0 px-3 gap-3 xl:gap-10 justify-start lg:justify-center items-end lg:items-center -ml-80 z-0'>
+        <p id='herotext' className='HeroName text-4xl sm:text-6xl lg:text-8xl xl:text-9xl text-center font-bold text-[#eeeee2]'>Md Mirza Shihab</p>
+        <p id='herotext' className='title text-md sm:text-2xl lg:text-4xl 2xl:text-5xl text-center font-bold text-[#eeebda]'>{currentTitle}</p>
+        <p id='herotext' className='HeroDetail text-md md:text-3xl text-slate-200 font-dancing text-center'>Specializing in Frontend Development</p>
       </div>
     </div>
   );
