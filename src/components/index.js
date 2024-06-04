@@ -5,6 +5,7 @@ import About from "./About";
 import Certificates from "./Certificates";
 import Experience from "./Experience";
 import Error from "./Error";
+import Body from "./Body";
 
 export {
   Nav,
@@ -14,4 +15,5 @@ export {
   Experience,
   Error,
   Hero,
+  Body,
 };

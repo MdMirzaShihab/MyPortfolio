@@ -27,18 +27,22 @@ const Hero = () => {
     gsap.from('.background1', {
       x: -500,
       duration:0.5,
-      delay:0.5
+      delay:0.5,
+      opacity:0
     })
     gsap.from('.background2', {
       x: -500,
       duration:0.5,
-      delay:0
+      delay:0,
+      opacity:0
     })
 
     gsap.from('.HeroText', {
-      x: -1500,
+      x: -100,
       duration:1,
-      delay:1
+      delay:1,
+      opacity:0,
+      stagger:1,
     })
 
     const titleInterval = setInterval(changeTitle, 3000);
@@ -47,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='flex flex-row bg-slate-400 w-full h-[700px]'>
+    <div className='flex flex-row bg-slate-400 w-full h-[700px] pt-12'>
       {/* Container for images */}
    
       <div className='relative w-full h-auto'>
@@ -60,7 +64,7 @@ const Hero = () => {
       <div className='HeroText flex flex-col w-full pt-20 lg:pt-0 px-3 gap-3 xl:gap-10 justify-start lg:justify-center items-end lg:items-center -ml-80 z-0'>
         <p id='herotext' className='HeroName text-4xl sm:text-6xl lg:text-8xl xl:text-9xl text-center font-bold text-[#eeeee2]'>Md Mirza Shihab</p>
         <p id='herotext' className='title text-md sm:text-2xl lg:text-4xl 2xl:text-5xl text-center font-bold text-[#eeebda]'>{currentTitle}</p>
-        <p id='herotext' className='HeroDetail text-md md:text-3xl text-slate-200 font-dancing text-center'>Specializing in Frontend Development</p>
+        <p id='herotext' className='md:p-3 lg:ml-20 md:ml-24 ml-40  HeroDetail text-md md:text-3xl text-slate-200 font-dancing text-center'>I am a results-driven Software Engineer with a deep passion for transforming innovative ideas into real-world solutions. As a Certified Scrum Master (CSM), I have honed my skills in Agile methodologies and project management, allowing me to effectively lead teams and drive successful outcomes in the fast-paced software industry.</p>
       </div>
     </div>
   );
