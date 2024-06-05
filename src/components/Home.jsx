@@ -9,6 +9,7 @@ function Home() {
     <div className="bg-[#ffffff]">
       <Hero />
       <Body />
+      <div className="h-[700px]"></div>
     </div>
   );
 }
