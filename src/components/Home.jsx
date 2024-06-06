@@ -4,7 +4,10 @@ import {
   Body,
 } from "../components";
 
+
+
 function Home() {
+
   return (
     <div className="bg-[#ffffff]">
       <Hero />

@@ -51,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='flex flex-row bg-slate-400 w-full h-[700px] pt-12'>
+    <div className='flex flex-row bg-slate-400 w-full h-[700px] pt-16'>
       {/* Container for images */}
    
       <div className='relative w-full h-auto'>
@@ -62,7 +62,7 @@ const Hero = () => {
       </div>
       {/* Text content */}
       <div className='HeroText flex flex-col w-full pt-20 lg:pt-0 px-3 gap-3 xl:gap-10 justify-start lg:justify-center items-end lg:items-center -ml-80 z-0 '>
-        <p id='herotext' className='HeroName text-4xl sm:text-6xl lg:text-8xl xl:text-9xl text-center font-bold text-[#eeeee2]'>Md Mirza Shihab</p>
+        <p id='herotext' className='HeroName text-4xl sm:text-6xl lg:text-8xl xl:text-9xl text-center font-bold text-[#eeeee2]  tracking-tight'>Md Mirza Shihab</p>
         <p id='herotext' className='title text-xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-center font-bold text-[#eeebda] font-dancing'>{currentTitle}</p>
         <p id='herotext' className='md:p-3 lg:ml-20 md:ml-24 ml-40 HeroDetail text-md md:text-2xl text-slate-200 text-center'>I am a results-driven Software Engineer with a deep passion for transforming innovative ideas into real-world solutions. As a Certified Scrum Master (CSM), I have honed my skills in Agile methodologies and project management, allowing me to effectively lead teams and drive successful outcomes in the fast-paced software industry.</p>
       </div>

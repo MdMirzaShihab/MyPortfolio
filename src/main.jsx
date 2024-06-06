@@ -10,10 +10,12 @@ import {
   Error
 
 } from "./components";
+import LocomotiveScroll from 'locomotive-scroll';
 
 import "./index.css";
 
 const App = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div>
       <Nav />
