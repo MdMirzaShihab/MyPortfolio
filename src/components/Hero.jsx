@@ -51,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='flex flex-row bg-slate-400 w-full h-[700px] pt-16'>
+    <div className='flex flex-row bg-slate-400 w-full h-[800px] pt-16'>
       {/* Container for images */}
    
       <div className='relative w-full h-auto'>

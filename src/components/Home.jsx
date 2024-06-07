@@ -1,7 +1,8 @@
 import React from "react";
 import {
   Hero,
-  Body,
+  Badge,
+  Projects,
 } from "../components";
 
 
@@ -11,8 +12,8 @@ function Home() {
   return (
     <div className="bg-[#ffffff]">
       <Hero />
-      <Body />
-      <div className="h-[700px]"></div>
+      <Badge />
+      <Projects />
     </div>
   );
 }
