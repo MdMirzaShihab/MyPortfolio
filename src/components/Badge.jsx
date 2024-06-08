@@ -124,9 +124,9 @@ const Badge = () => {
   useEffect(() => {
     // If details are shown, scale down the card containers, otherwise scale them back up
     if (activeBadgeID) {
-      gsap.to(".cardContainer", { duration:1.5, scale: 0.5 });
+      gsap.to(".cardContainer", { duration: 1.5, scale: 0.5 });
     } else {
-      gsap.to(".cardContainer", { duration:1.5, scale: 1 });
+      gsap.to(".cardContainer", { duration: 1.5, scale: 1 });
     }
   }, [activeBadgeID]); // This effect runs whenever activeBadgeID changes
 
@@ -135,10 +135,10 @@ const Badge = () => {
   };
 
   const renderBadgeDetails = (badge) => {
-    const badgeTextColor = badge.badgeTextColor
+    const badgeTextColor = badge.badgeTextColor;
     return (
       <div className="badgeDetails flex flex-col md:flex-row text-gray-50 px-10 pb-10 justify-center items-center gap-8 backdrop-blur-sm rounded-2xl">
-        <div className="badgeCard flex w-[300px] h-[400px] p-2 bg-white justify-center items-center rounded-2xl border-4 border-sky-200 overflow-hidden cursor-pointer">
+        <div className="badgeCard flex w-[300px] h-[400px] p-2 bg-white justify-center items-center rounded-2xl border-4 border-[#e69305] overflow-hidden cursor-pointer">
           <img
             src={badge.badgeImage}
             className="object-contain"
@@ -148,9 +148,14 @@ const Badge = () => {
         <div>
           <ul className="flex flex-col justify-evenly">
             {badge.badgeInnertext.map((item, index) => (
-              <li key={index} className={`lg:text-3xl ${badgeTextColor} font-bold my-2`}>
+              <li
+                key={index}
+                className={`lg:text-3xl ${badgeTextColor} font-bold my-2`}>
                 {item.textTitle}
-                <span className="lg:text-2xl font-dancing font-normal"> {item.text} </span>
+                <span className="lg:text-2xl font-dancing font-normal">
+                  {" "}
+                  {item.text}{" "}
+                </span>
               </li>
             ))}
           </ul>
@@ -164,95 +169,91 @@ const Badge = () => {
     ? badgeData.find((badge) => badge.badgeID === activeBadgeID).badgeBg
     : "#060f30";
 
-    const activePadding = activeBadgeID ? "py-0" : "py-10 pb-60";
-
+  const activePadding = activeBadgeID ? "py-0" : "py-10 pb-60";
+  const badgeBorderColor = activeBadgeID ? "border-[#e69305]" : "border-sky-200";
 
   return (
     <div className="badgeSec p-5 overflow-hidden" style={{ backgroundColor }}>
-             <div className="relative blur-sm"> 
-              
-              <img
-            src={IBM}
-            className="absolute top-[20vh] left-[5vw] object-contain w-[150px]"
-            alt="IBM"
-          />
-                        <img
-            data-scroll data-scroll-speed="0.1"
-            src={ErusmusUni}
-            className="absolute top-[35vh] left-[10vw] object-contain w-[400px]"
-            alt="ErusmusUni"
-          />
-                                  <img
-            data-scroll data-scroll-speed="0.2"
-            src={UCI}
-            className="absolute top-[60vh] left-[5vw] object-contain w-[300px]"
-            alt="UCI"
-          />
-                                            <img
-      
-            src={Meta}
-            className="absolute top-[10vh] right-[12vw] object-contain w-[200px]"
-            alt="Meta"
-          />
+      <div className="relative blur-sm">
+        <img
+          src={IBM}
+          className="absolute top-[20vh] left-[5vw] object-contain w-[150px]"
+          alt="IBM"
+        />
+        <img
+          data-scroll
+          data-scroll-speed="0.1"
+          src={Meta}
+          className="absolute top-[35vh] left-[10vw] object-contain w-[200px]"
+          alt="ErusmusUni"
+        />
+        <img
+          data-scroll
+          data-scroll-speed="0.2"
+          src={UCI}
+          className="absolute top-[60vh] left-[5vw] object-contain w-[300px]"
+          alt="UCI"
+        />
+        <img
+          src={ErusmusUni}
+          className="absolute top-[10vh] right-[12vw] object-contain w-[400px]"
+          alt="Meta"
+        />
 
-<img
-                       data-scroll data-scroll-speed="0.1"
-           src={Udemy}
-           className="absolute top-[70vh] left-[20vw] object-contain w-[200px]"
-           alt="Udemy"
-         />
+        <img
+          data-scroll
+          data-scroll-speed="0.1"
+          src={Udemy}
+          className="absolute top-[80vh] left-[20vw] object-contain w-[200px]"
+          alt="Udemy"
+        />
 
+        <img
+          data-scroll
+          data-scroll-speed="0.1"
+          src={Google}
+          className="absolute top-[25vh] right-[2vw] object-contain w-[200px]"
+          alt="Google"
+        />
 
+        <img
+          data-scroll
+          data-scroll-speed="0.3"
+          src={CREST}
+          className="absolute top-[65vh] right-[35vw] object-contain w-[200px]"
+          alt="CREST"
+        />
 
+        <img
+          data-scroll
+          data-scroll-speed="0.2"
+          src={ATLASSIAN}
+          className="absolute top-[60vh] right-[5vw] object-contain w-[200px]"
+          alt="ATLASSIAN"
+        />
 
-         
-<img
-                       data-scroll data-scroll-speed="0.1"
-           src={Google}
-           className="absolute top-[25vh] right-[2vw] object-contain w-[200px]"
-           alt="Google"
-         />
+        <img
+          data-scroll
+          data-scroll-speed="0.1"
+          src={ISO}
+          className="absolute top-[80vh] right-[12vw] object-contain w-[200px]"
+          alt="ISO"
+        />
+      </div>
 
-
-
-
-         
-<img
-               data-scroll data-scroll-speed="0.3"
-           src={CREST}
-           className="absolute top-[65vh] right-[35vw] object-contain w-[200px]"
-           alt="CREST"
-         />
-
-<img
-               data-scroll data-scroll-speed="0.2"
-           src={ATLASSIAN}
-           className="absolute top-[60vh] right-[5vw] object-contain w-[200px]"
-           alt="ATLASSIAN"
-         />
-
-
-<img
-               data-scroll data-scroll-speed="0.1"
-           src={ISO}
-           className="absolute top-[80vh] right-[12vw] object-contain w-[200px]"
-           alt="ISO"
-         />
-</div>
-
-      <div  data-scroll data-scroll-speed="0.1" className="mt-16">
+      <div data-scroll data-scroll-speed="0.1" className="mt-16">
         <h1 className="badgeText font-bold text-5xl md:text-8xl text-center pb-5 text-white">
           Badges That Represent Me
         </h1>
       </div>
-      <div className={`cardContainer ${activePadding} flex justify-center gap-12`}>
+      <div
+        className={`cardContainer ${activePadding} flex justify-center gap-12`}>
         {badgeData.map((badge) => (
-          <div
-            key={badge.badgeID}
-            className=" flex flex-col items-center">
+          <div key={badge.badgeID} className=" flex flex-col items-center">
             <div
-            data-scroll data-scroll-speed="0.2"
-              className="badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 border-sky-200 overflow-hidden cursor-pointer"
+              data-scroll
+              data-scroll-speed="0.2"
+              className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} overflow-hidden cursor-pointer`}
               onClick={() => handleBadgeClick(badge.badgeID)}>
               <img
                 src={badge.badgeImage}
