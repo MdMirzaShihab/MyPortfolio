@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import CSM from "../assets/CSM-logo.png";
 import GPM from "../assets/GPM.png";
 import UTM from "../assets/UTM-LOGO.png";
+import ATLASSIAN from "../assets/ATLASSIAN.png";
+import CREST from "../assets/CREST.png";
+import ErusmusUni from "../assets/ErusmusUni.png";
+import Google from "../assets/Google.png";
+import IBM from "../assets/IBM.png";
+import ISO from "../assets/ISO.png";
+import Meta from "../assets/Meta.png";
+import UCI from "../assets/UCI.png";
+import Udemy from "../assets/Udemy.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -36,7 +45,7 @@ const badgeData = [
         text: "Leverage formal training and certification to apply Scrum principles effectively and credibly",
       },
     ],
-    badgeBg: "#947a03",
+    badgeBg: "#f9b620",
     badgeTextColor: "text-[#ffffff]",
   },
   {
@@ -69,8 +78,8 @@ const badgeData = [
         text: "Combined technical expertise with certified Scrum Master skills to drive efficient and effective project delivery.",
       },
     ],
-    badgeBg: "#630031",
-    badgeTextColor: "text-[#ffd700]",
+    badgeBg: "#5d001d",
+    badgeTextColor: "text-[#e69305]",
   },
   {
     badgeID: 3,
@@ -102,7 +111,7 @@ const badgeData = [
         text: "Developed competencies in using data and metrics to make informed project decisions and optimize outcomes.",
       },
     ],
-    badgeBg: "#065535",
+    badgeBg: "#c36f00",
     badgeTextColor: "text-[#ffffff]",
   },
 ];
@@ -159,7 +168,78 @@ const Badge = () => {
 
 
   return (
-    <div className="badgeSec p-5" style={{ backgroundColor }}>
+    <div className="badgeSec p-5 overflow-hidden" style={{ backgroundColor }}>
+             <div className="relative blur-sm"> 
+              
+              <img
+            src={IBM}
+            className="absolute top-[20vh] left-[5vw] object-contain w-[150px]"
+            alt="IBM"
+          />
+                        <img
+            data-scroll data-scroll-speed="0.1"
+            src={ErusmusUni}
+            className="absolute top-[35vh] left-[10vw] object-contain w-[400px]"
+            alt="ErusmusUni"
+          />
+                                  <img
+            data-scroll data-scroll-speed="0.2"
+            src={UCI}
+            className="absolute top-[60vh] left-[5vw] object-contain w-[300px]"
+            alt="UCI"
+          />
+                                            <img
+      
+            src={Meta}
+            className="absolute top-[10vh] right-[12vw] object-contain w-[200px]"
+            alt="Meta"
+          />
+
+<img
+                       data-scroll data-scroll-speed="0.1"
+           src={Udemy}
+           className="absolute top-[70vh] left-[20vw] object-contain w-[200px]"
+           alt="Udemy"
+         />
+
+
+
+
+         
+<img
+                       data-scroll data-scroll-speed="0.1"
+           src={Google}
+           className="absolute top-[25vh] right-[2vw] object-contain w-[200px]"
+           alt="Google"
+         />
+
+
+
+
+         
+<img
+               data-scroll data-scroll-speed="0.3"
+           src={CREST}
+           className="absolute top-[65vh] right-[35vw] object-contain w-[200px]"
+           alt="CREST"
+         />
+
+<img
+               data-scroll data-scroll-speed="0.2"
+           src={ATLASSIAN}
+           className="absolute top-[60vh] right-[5vw] object-contain w-[200px]"
+           alt="ATLASSIAN"
+         />
+
+
+<img
+               data-scroll data-scroll-speed="0.1"
+           src={ISO}
+           className="absolute top-[80vh] right-[12vw] object-contain w-[200px]"
+           alt="ISO"
+         />
+</div>
+
       <div  data-scroll data-scroll-speed="0.1" className="mt-16">
         <h1 className="badgeText font-bold text-5xl md:text-8xl text-center pb-5 text-white">
           Badges That Represent Me
