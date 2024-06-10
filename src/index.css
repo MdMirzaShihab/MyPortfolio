@@ -15,5 +15,42 @@
     transition: opacity 1s ease, visibility 1s ease;
   }
   
-  
-  
+  /* Alert page CSS */.alert-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ffcc00;
+  background-color: #fff8e1;
+  color: #d32f2f;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.alert h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.warning-details {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.close-button {
+  cursor: pointer;
+  color: #d32f2f;
+}

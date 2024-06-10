@@ -7,7 +7,8 @@ import {
   About,
   Certificates,
   Experience,
-  Error
+  Error,
+  Alert,
 
 } from "./components";
 import LocomotiveScroll from 'locomotive-scroll';
@@ -18,6 +19,7 @@ const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
   return (
     <div>
+      <Alert />
       <Nav />
       <Outlet />
     </div>

@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Error from "./Error";
 import Badge from "./Badge";
 import Projects from "./Projects";
+import Alert from "./Alert";
 
 
 export {
@@ -19,4 +20,5 @@ export {
   Hero,
   Badge,
   Projects,
+  Alert,
 };
