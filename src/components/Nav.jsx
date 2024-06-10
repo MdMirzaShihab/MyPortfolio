@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from "react-router-dom";
-import Logo from '../assets/myLogo.png';
+import Logo from '../assets/Logos/myLogo.webp';
 
 const Nav = () => {
 

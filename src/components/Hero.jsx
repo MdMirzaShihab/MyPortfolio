@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import {useGSAP} from '@gsap/react';
-import hero from '../assets/HeroImg.png';
-import heroImgbg1 from '../assets/HeroImgbg1.png';
-import heroImgbg2 from '../assets/HeroImgbg2.png';
+import hero from '../assets/HeroImg.webp';
+import heroImgbg1 from '../assets/HeroImgbg1.webp';
+import heroImgbg2 from '../assets/HeroImgbg2.webp';
 
 
 const whoIam = ["Passionate Software Engineer", "Certified Scrum Master", "Aspiring Educator and Researcher"];

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import CSM from "../assets/CSM-logo.png";
-import GPM from "../assets/GPM.png";
-import UTM from "../assets/UTM-LOGO.png";
-import ATLASSIAN from "../assets/ATLASSIAN.png";
-import CREST from "../assets/CREST.png";
-import ErusmusUni from "../assets/ErusmusUni.png";
-import Google from "../assets/Google.png";
-import IBM from "../assets/IBM.png";
-import ISO from "../assets/ISO.png";
-import Meta from "../assets/Meta.png";
-import UCI from "../assets/UCI.png";
-import Udemy from "../assets/Udemy.png";
+import CSM from "../assets/Logos/CSM-logo.webp";
+import GPM from "../assets/Logos/GPM.webp";
+import UTM from "../assets/Logos/UTM-LOGO.webp";
+import ATLASSIAN from "../assets/Logos/ATLASSIAN.webp";
+import CREST from "../assets/Logos/CREST.webp";
+import ErusmusUni from "../assets/Logos/ErusmusUni.webp";
+import Google from "../assets/Logos/Google.webp";
+import IBM from "../assets/Logos/IBM.webp";
+import ISO from "../assets/Logos/ISO.webp";
+import Meta from "../assets/Logos/Meta.webp";
+import UCI from "../assets/Logos/UCI.webp";
+import Udemy from "../assets/Logos/Udemy.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
