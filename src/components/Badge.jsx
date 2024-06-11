@@ -249,10 +249,11 @@ const Badge = () => {
       <div
         className={`cardContainer ${activePadding} flex justify-center gap-12`}>
         {badgeData.map((badge) => (
-          <div key={badge.badgeID} className=" flex flex-col items-center">
+          <div 
+          data-scroll
+          data-scroll-speed="0.2"
+          key={badge.badgeID} className=" flex flex-col items-center">
             <div
-              data-scroll
-              data-scroll-speed="0.2"
               className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} overflow-hidden cursor-pointer`}
               onClick={() => handleBadgeClick(badge.badgeID)}>
               <img
@@ -260,8 +261,11 @@ const Badge = () => {
                 className="object-contain"
                 alt={badge.badgeName}
               />
+              
             </div>
+            <h1 className="text-sky-200 font-dancing text-2xl">Click me</h1>
           </div>
+          
         ))}
       </div>
       {activeBadgeID &&
