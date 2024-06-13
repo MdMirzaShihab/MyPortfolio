@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { gsap } from 'gsap';
-import {useGSAP} from '@gsap/react';
+import { useGSAP } from '@gsap/react';
 import hero from '../assets/HeroImg.webp';
 import heroImgbg1 from '../assets/HeroImgbg1.webp';
 import heroImgbg2 from '../assets/HeroImgbg2.webp';

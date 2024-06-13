@@ -14,6 +14,7 @@ function Home() {
       <Hero />
       <Badge />
       <Projects />
+      <div className="h-screen bg-black"> </div>
     </div>
   );
 }
