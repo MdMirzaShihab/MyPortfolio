@@ -55,6 +55,9 @@
   color: #d32f2f;
 }
 
+
+
+
 /* projects */
 
 .el {
@@ -84,7 +87,7 @@
 
   &:nth-of-type(2) {
     .imageContainer {
-      top: -10vh;
+      top: -25vh;
 
       left: 19vw;
 
@@ -94,23 +97,24 @@
 
   &:nth-of-type(3) {
     .imageContainer {
-      top: -10vh;
+      top: -25vh;
 
-      left: -24vw;
+      left: 4vw;
 
-      width: 20vw;
+      width: 15vw;
     }
   }
 
-  /* &:nth-of-type(4){
+  &:nth-of-type(4){
 
       .imageContainer{
 
-          left: 27.5vw;
+          top: 6vh;
 
-          width: 25vw;
+          left: -18.5vw;
 
-          height: 25vh;
+          width: 10vw;
+
 
       }
 
@@ -120,13 +124,12 @@
 
       .imageContainer{
 
-          top: 27.5vh;
+          top: -10vh;
 
-          left: 5vw;
+          left: -30vw;
 
-          width: 20vw;
+          width: 10vw;
 
-          height: 25vh;
 
       }
 
@@ -136,13 +139,11 @@
 
       .imageContainer{
 
-          top: 27.5vh;
+          top: 9vh;
 
-          left: -22.5vw;
+          left: 24.5vw;
 
-          width: 30vw;
-
-          height: 25vh;
+          width: 20vw;
 
       }
 
@@ -152,15 +153,39 @@
 
       .imageContainer{
 
-          top: 22.5vh;
+          top: -16vh;
 
-          left: 25vw;
+          left: 33vw;
 
           width: 15vw;
 
-          height: 15vh;
-
       }
 
-  } */
+  }
+  &:nth-of-type(8){
+
+    .imageContainer{
+
+        top: 27vh;
+
+        left: vw;
+
+        width: 20vw;
+
+    }
+
+}
+&:nth-of-type(9){
+
+  .imageContainer{
+
+      top: -25vh;
+
+      left: -15vw;
+
+      width: 17vw;
+
+  }
+
+}
 }

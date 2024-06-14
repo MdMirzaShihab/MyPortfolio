@@ -1,9 +1,15 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
 import { useScroll, useTransform, motion } from "framer-motion";
 import PDCL from "../assets/Projects/PDCL/PortfolioPDCLshort.mp4";
-import Trademic from "../assets/Projects/Trademic/AndroidRatioImage.mp4";
-import Boipoka from "../assets/Projects/Boipoka/AppPromo.mp4";
+import Trademic from "../assets/Projects/Trademic/Trademic.mp4";
+import Boipoka from "../assets/Projects/Boipoka/Boipoka.mp4";
+import CEdelivery from "../assets/Projects/CEdelivery/CEdeliveryVdo.mp4";
+import Exponentum from "../assets/Projects/Exponentum/Exponentum.mp4";
+import FlyingFarmers from "../assets/Projects/FlyingFarmers/FlyingFarmersVdo.mp4";
+import Pogoda from "../assets/Projects/Pogoda/POGODA.mp4";
+import Sabisy from "../assets/Projects/Sabisy/SABISY.mp4";
+import Subidha from "../assets/Projects/Subidha/SubidhaParkingSolution.mp4";
+
 
 const ProjectSection = () => {
   const imgContainer = useRef(null);
@@ -16,6 +22,9 @@ const ProjectSection = () => {
   const scale1 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale2 = useTransform(scrollYProgress, [0, 1], [1, 5]);
   const scale3 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 7]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 8]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
   const projectThumbnails = [
     {
@@ -29,6 +38,30 @@ const ProjectSection = () => {
     {
       src: Boipoka,
       scale: scale3,
+    },
+    {
+      src: CEdelivery,
+      scale: scale4,
+    },
+    {
+      src: Exponentum,
+      scale: scale5,
+    },
+    {
+      src: FlyingFarmers,
+      scale: scale6,
+    },
+    {
+      src: Pogoda,
+      scale: scale4,
+    },
+    {
+      src: Sabisy,
+      scale: scale5,
+    },
+    {
+      src: Subidha,
+      scale: scale6,
     },
   ];
 
@@ -46,7 +79,7 @@ const ProjectSection = () => {
                   autoPlay
                   muted
                   loop
-                  className={`object-cover rounded-lg shadow-2xl`}>
+                  className={`object-cover rounded-lg shadow-2xl border-4`}>
                   <source src={project.src} type="video/mp4" />
                 </video>
               </div>
