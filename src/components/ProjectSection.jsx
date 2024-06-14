@@ -73,13 +73,13 @@ const ProjectSection = () => {
             <motion.div
               key={index}
               style={{ scale: project.scale }}
-              className="el pt-5">
+              className="el md:mt-24 mt-0">
               <div className={`imageContainer`}>
                 <video
                   autoPlay
                   muted
                   loop
-                  className={`object-cover rounded-lg shadow-2xl border-4`}>
+                  className={`object-cover rounded-lg shadow-2xl border-2`}>
                   <source src={project.src} type="video/mp4" />
                 </video>
               </div>
@@ -87,7 +87,7 @@ const ProjectSection = () => {
           );
         })}
 
-        <h1 className="badgeText font-bold text-5xl md:text-8xl pt-10 text-center pb-5 text-white">
+        <h1 className="badgeText font-bold text-5xl md:text-8xl pt-10 text-center text-white">
           Projects
         </h1>
       </div>
