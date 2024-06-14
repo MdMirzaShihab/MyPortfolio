@@ -5,10 +5,11 @@ import About from "./About";
 import Certificates from "./Certificates";
 import Experience from "./Experience";
 import Error from "./Error";
-import Badge from "./Badge";
-import Projects from "./Projects";
+import BadgeSection from "./BadgeSection";
+import ProjectSection from "./ProjectSection";
 import Alert from "./Alert";
-
+import Contact from "./Contact";
+import Projects from "./Projects";
 
 export {
   Nav,
@@ -18,7 +19,9 @@ export {
   Experience,
   Error,
   Hero,
-  Badge,
-  Projects,
+  BadgeSection,
+  ProjectSection,
   Alert,
+  Contact,
+  Projects,
 };

@@ -9,9 +9,10 @@ import {
   Experience,
   Error,
   Alert,
-
+  Contact,
+  Projects,
 } from "./components";
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from "locomotive-scroll";
 
 import "./index.css";
 
@@ -35,6 +36,8 @@ const routes = [
       { path: "/certificates", element: <Certificates /> },
       { path: "/experience", element: <Experience /> },
       { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/projects", element: <Projects /> },
     ],
     errorElement: <Error />,
   },

@@ -1,20 +1,19 @@
 import React from "react";
-import {
-  Hero,
-  Badge,
-  Projects,
-} from "../components";
-
-
+import { Hero, BadgeSection, ProjectSection } from "../components";
 
 function Home() {
-
   return (
     <div className="bg-[#ffffff]">
       <Hero />
-      <Badge />
-      <Projects />
-      <div className="h-screen bg-black"> </div>
+      <BadgeSection />
+      <ProjectSection />
+      <div className="bg-black flex justify-between">
+        <div className="text-xl text-white"> Wanna explore projects page? </div>
+        <div> <button className="bg-white"> Let's go </button> </div>
+      </div>
+      <div className="bg-black h-screen">
+
+      </div>
     </div>
   );
 }
