@@ -79,7 +79,7 @@ const ProjectSection = () => {
                   autoPlay
                   muted
                   loop
-                  className={`object-cover rounded-lg shadow-2xl border-2`}>
+                  className={`object-cover rounded-lg shadow-2xl`}>
                   <source src={project.src} type="video/mp4" />
                 </video>
               </div>

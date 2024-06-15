@@ -7,9 +7,11 @@ function Home() {
       <Hero />
       <BadgeSection />
       <ProjectSection />
-      <div className="bg-black flex justify-between">
-        <div className="text-xl text-white"> Wanna explore projects page? </div>
-        <div> <button className="bg-white"> Let's go </button> </div>
+      <div className="absolute bg-transparent h-20 w-full -mt-20 z-20">
+        <div className=" flex justify-between">
+        <div className="text-xl"> Wanna explore projects page? </div>
+        <div> <button className=""> Let's go </button> </div>
+        </div>
       </div>
       <div className="bg-black h-screen">
 
