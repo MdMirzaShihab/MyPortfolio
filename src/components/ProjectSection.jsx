@@ -28,39 +28,48 @@ const ProjectSection = () => {
 
   const projectThumbnails = [
     {
-      src: PDCL,
+      id:1,
+      vdo: PDCL,
       scale: scale1,
     },
     {
-      src: Trademic,
+      id:2,
+      vdo: Trademic,
       scale: scale2,
     },
     {
-      src: Boipoka,
+      id:3,
+      vdo: Boipoka,
       scale: scale3,
     },
     {
-      src: CEdelivery,
+      id:4,
+      vdo: CEdelivery,
       scale: scale4,
     },
     {
-      src: Exponentum,
+      id:5,
+      vdo: Exponentum,
       scale: scale5,
     },
     {
-      src: FlyingFarmers,
+      id:6,
+      vdo: FlyingFarmers,
       scale: scale6,
     },
     {
-      src: Pogoda,
+      id:7,
+      vdo: Pogoda,
       scale: scale4,
     },
     {
-      src: Sabisy,
+      id:8,
+      vdo: Sabisy,
       scale: scale5,
     },
     {
-      src: Subidha,
+      id:9,
+      vdo: Subidha,
       scale: scale6,
     },
   ];
@@ -68,10 +77,10 @@ const ProjectSection = () => {
   return (
     <div ref={imgContainer} className="relative h-[300vh] bg-slate-500">
       <div className="sticky top-16 h-[100vh] overflow-hidden">
-        {projectThumbnails.map((project, index) => {
+        {projectThumbnails.map((project) => {
           return (
             <motion.div
-              key={index}
+              key={project.id}
               style={{ scale: project.scale }}
               className="el md:mt-24 mt-0">
               <div className={`imageContainer`}>
@@ -80,7 +89,7 @@ const ProjectSection = () => {
                   muted
                   loop
                   className={`object-cover rounded-lg shadow-2xl`}>
-                  <source src={project.src} type="video/mp4" />
+                  <source src={project.vdo} type="video/mp4" />
                 </video>
               </div>
             </motion.div>
@@ -91,6 +100,7 @@ const ProjectSection = () => {
         Explore My Creative Journey
         </h1>
       </div>
+      
     </div>
   );
 };

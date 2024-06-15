@@ -30,20 +30,20 @@ const Hero = () => {
     gsap.from(".background1", {
       x: -500,
       duration: 0.5,
-      delay: 0.5,
+      delay: 1,
       opacity: 0,
     });
     gsap.from(".background2", {
       x: -500,
       duration: 0.5,
-      delay: 0,
+      delay: 0.5,
       opacity: 0,
     });
 
     gsap.from(".HeroText", {
       x: -100,
       duration: 1,
-      delay: 1,
+      delay: 1.5,
       opacity: 0,
       stagger: 1,
     });
