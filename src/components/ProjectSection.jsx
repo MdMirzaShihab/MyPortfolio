@@ -87,8 +87,8 @@ const ProjectSection = () => {
           );
         })}
 
-        <h1 className="badgeText font-bold text-5xl md:text-8xl pt-10 text-center text-white">
-          Projects
+        <h1 className="badgeText font-bold text-5xl md:text-8xl p-10 pt-10 text-center text-white">
+        Explore My Creative Journey
         </h1>
       </div>
     </div>
