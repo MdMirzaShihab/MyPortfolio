@@ -19,7 +19,7 @@ const ExpData = [
     designation: "RESEARCH INTERN",
     location: "Johor, Malaysia",
     workDetails:["Conducted research in bioinformatics, focusing on optimization and feature selection methods in disease classification.", "Assisted in the preparation of a research paper titled 'A Review of Computational Methods for Optimization and Feature Selection in Disease Classification.'",],
-    stick:"top-[12vh]", 
+    stick:"top-[25vh]", 
   },
   {
     companyID: 2,
@@ -33,7 +33,7 @@ const ExpData = [
     designation: "SOFTWARE DEVELOPER INTERN",
     location: "Singapore",
     workDetails:["Contributed to the frontend development of an event management media system targeting the markets of Singapore and Malaysia.", "Gained valuable experience in startup culture and agile development practices.",],
-    stick:"top-[14vh]",
+    stick:"top-[28vh]",
   },
   {
     companyID: 3,
@@ -47,7 +47,7 @@ const ExpData = [
     designation: "SOFTWARE DEVELOPER INTERN",
     location: "Johor, Malaysia",
     workDetails:["Collaborated on a risk management system for Petronas using the QT framework.", "Worked on the 'smart hospital management system (asset model)' project.", "Gained hands-on experience in software development for the oil and gas industry."],
-    stick:"top-[16vh]",
+    stick:"top-[31vh]",
   },
   {
     companyID: 4,
@@ -61,7 +61,7 @@ const ExpData = [
     designation: "RESEARCH INTERN",
     location: "Thuringia, Germany",
     workDetails:["Worked on Matlab simulations and gained insights into MRI technology.", "Got an insight idea of the ongoing research project 'Generation of Volume Conductor Models from MRI Data Sets.'",],
-    stick:"top-[18vh]",
+    stick:"top-[34vh]",
   },
   {
     companyID: 5,
@@ -75,22 +75,11 @@ const ExpData = [
     designation: "SOFTWARE ENGINEER",
     location: "Dhaka, Bangladesh",
     workDetails: ["Led the establishment of the software development team, for inhouse software development at PDCL.", "Designed the digital patient end software for the organization, streamlining patient management and enhancing user experience.", "Collaborated with healthcare professionals to gather requirements and ensure compliance with industry standards.", "Successfully implemented agile methodologies to improve project efficiency and product quality.",],
-    stick:"top-[20vh]",
+    stick:"top-[37vh]",
   },
 ];
 
 const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, duration, skills, technology, designation, location, workDetails }) => {
-
-    const ExpCardContainer = useRef(null);
-
-    const {scrollYProgress } = useScroll ({
-        target: ExpCardContainer,
-        offset: ["start end", "start, start"]
-    })
-
-    const scale = useTransform(scrollYProgress, [0,1], [1,4]);
-
-
 
 
 
@@ -98,7 +87,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
     <div className={`sticky ${stick}`}>
     <div className="group flex flex-col relative after:shadow-lg after:shadow-black mb-10">
       {/* semi hidden slide */}
-      <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[400px] rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14`}>
+      <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[400px] rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14 border-2`}>
         <div className="flex flex-col gap-4">
           {/* Logo */}
           <div className="flex items-center gap-4">
@@ -118,7 +107,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
         </div>
       </div>
       {/* main */}
-      <div className={`absolute -right-16 top-0 z-20 w-[60vw] h-[400px] flex flex-col justify-center self-end rounded-xl rounded-l-2xl border-none bg-slate-500 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-right-14 group-hover:w-[34vw] group-hover:rounded-l-lg overflow-hidden`}>
+      <div className={`absolute -right-16 top-0 z-20 w-[60vw] h-[400px] flex flex-col justify-center self-end rounded-xl rounded-l-2xl border-2 bg-slate-500 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-right-14 group-hover:w-[34vw] group-hover:rounded-l-lg overflow-hidden`}>
         {/* All card details should be arranged here. */}
         <div className="flex flex-col justify-center items-center text-white">
         <a href={link} target="_blank">
@@ -150,7 +139,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
 const ExperienceSection = () => {
   return (
     <div className="">
-      <h1 className="badgeText font-bold text-5xl md:text-8xl p-10 pt-20 text-center text-gray-800">
+      <h1 className="sticky top-0 font-bold text-5xl md:text-8xl p-10 py-20 text-center text-gray-800">
         Professional Odyssey
       </h1>
       <div className="flex flex-col items-center justify-center">

@@ -8,6 +8,7 @@ import Error from "./Error";
 import BadgeSection from "./BadgeSection";
 import ProjectSection from "./ProjectSection";
 import ExperienceSection from "./ExperienceSection";
+import Footer from "./Footer";
 import Alert from "./Alert";
 import Contact from "./Contact";
 import Projects from "./Projects";
@@ -26,4 +27,5 @@ export {
   Contact,
   Projects,
   ExperienceSection,
+  Footer,
 };
