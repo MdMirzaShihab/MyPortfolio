@@ -277,24 +277,24 @@ const BadgeSection = () => {
             badgeData.find((badge) => badge.badgeID === activeBadgeID)
           )}
       </div>
-      <div className="object-cover flex justify-center">
+      <div className="-mt-10 flex justify-center pb-10">
       <motion.div
                 data-scroll
                 data-scroll-speed="0.1"
       className="relative w-full mx-auto m-5 p-6 flex justify-center items-center transition-shadow duration-300"
     >
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-slate-50 mb-1">Want to Dive Deeper?</h2>
+        <h2 className="text-4xl font-bold text-slate-50 mb-1">Discover More Achievements!</h2>
         <p className="text-slate-100 pb-3">
-          You've just seen a glimpse of my work through these short videos. Click the button below to explore all my projects in detail.
+        Unlock the Stories Behind My Success! Each badge is a testament to my commitment and expertise. Witness the dedication and hard work that have shaped my journey.
         </p>
         <motion.a
           href="/certificates"
-          className="inline-block px-6 py-3 text-slate-800 bg-slate-300 rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300"
+          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          See All Certificates
+          Interested to know More?
         </motion.a>
       </div>
     </motion.div>

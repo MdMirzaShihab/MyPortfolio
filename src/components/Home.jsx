@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import { Hero, BadgeSection, ProjectSection, ExperienceSection, Footer } from "../components";
+import { Hero, BadgeSection, ProjectSection, ExperienceSection, ExperienceOverview, Footer } from "../components";
 
 function Home() {
   return (
@@ -32,6 +32,7 @@ function Home() {
       </div>
       
       <ExperienceSection />
+      <ExperienceOverview />
       <Footer />
     </div>
   );

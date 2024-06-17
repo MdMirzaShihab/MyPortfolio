@@ -29,7 +29,7 @@ const ExpData = [
     supervisor:"Wan Nordin",
     duration: "05/2019 - 11/2019",
     skills:["Frontend", "Agile Methodology"],
-    technology: "JavaScript-Angular",
+    technology: "JavaScript-AngularJS",
     designation: "SOFTWARE DEVELOPER INTERN",
     location: "Singapore",
     workDetails:["Contributed to the frontend development of an event management media system targeting the markets of Singapore and Malaysia.", "Gained valuable experience in startup culture and agile development practices.",],
@@ -89,7 +89,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
       {/* semi hidden slide */}
       <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[480px] rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14 border-2`}>
         <div className="flex flex-col gap-4">
-          {/* Logo */}
+          {/* Logo */}Want to Dive Deeper?
           <div className="flex items-center gap-4">
             <img
               src={companyImg}
