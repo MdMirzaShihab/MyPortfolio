@@ -13,6 +13,7 @@ import UCI from "../assets/Logos/UCI.webp";
 import Udemy from "../assets/Logos/Udemy.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from 'framer-motion';
 
 const badgeData = [
   {
@@ -175,104 +176,129 @@ const BadgeSection = () => {
     : "border-sky-200";
 
   return (
-    <div className="badgeSec p-5 overflow-hidden" style={{ backgroundColor }}>
-      <div className="relative blur-sm">
-        <img
-          src={IBM}
-          className="absolute top-[20vh] left-[5vw] object-contain w-[150px]"
-          alt="IBM"
-        />
-        <img
-          data-scroll
-          data-scroll-speed="0.1"
-          src={Meta}
-          className="absolute top-[35vh] left-[10vw] object-contain w-[200px]"
-          alt="ErusmusUni"
-        />
-        <img
-          data-scroll
-          data-scroll-speed="0.2"
-          src={UCI}
-          className="absolute top-[60vh] left-[5vw] object-contain w-[300px]"
-          alt="UCI"
-        />
-        <img
-          src={ErusmusUni}
-          className="absolute top-[10vh] right-[12vw] object-contain w-[400px]"
-          alt="Meta"
-        />
-
-        <img
-          data-scroll
-          data-scroll-speed="0.1"
-          src={Udemy}
-          className="absolute top-[80vh] left-[20vw] object-contain w-[200px]"
-          alt="Udemy"
-        />
-
-        <img
-          data-scroll
-          data-scroll-speed="0.1"
-          src={Google}
-          className="absolute top-[25vh] right-[2vw] object-contain w-[200px]"
-          alt="Google"
-        />
-
-        <img
-          data-scroll
-          data-scroll-speed="0.3"
-          src={CREST}
-          className="absolute top-[65vh] right-[35vw] object-contain w-[200px]"
-          alt="CREST"
-        />
-
-        <img
-          data-scroll
-          data-scroll-speed="0.2"
-          src={ATLASSIAN}
-          className="absolute top-[60vh] right-[5vw] object-contain w-[200px]"
-          alt="ATLASSIAN"
-        />
-
-        <img
-          data-scroll
-          data-scroll-speed="0.1"
-          src={ISO}
-          className="absolute top-[80vh] right-[12vw] object-contain w-[200px]"
-          alt="ISO"
-        />
-      </div>
-
-      <div data-scroll data-scroll-speed="0.1" className="mt-16">
-        <h1 className="badgeText font-bold text-5xl md:text-8xl text-center pb-5 text-white">
-          Badges That Represent Me
-        </h1>
-      </div>
-      <div
-        className={`cardContainer ${activePadding} flex justify-center gap-12`}>
-        {badgeData.map((badge) => (
-          <div
+    <div style={{ backgroundColor }}>
+      
+      <div className="badgeSec p-5 " >
+        <div className="relative blur-sm">
+          <img
+            src={IBM}
+            className="absolute top-[20vh] left-[5vw] object-contain w-[150px]"
+            alt="IBM"
+          />
+          <img
+            data-scroll
+            data-scroll-speed="0.1"
+            src={Meta}
+            className="absolute top-[35vh] left-[10vw] object-contain w-[200px]"
+            alt="ErusmusUni"
+          />
+          <img
             data-scroll
             data-scroll-speed="0.2"
-            key={badge.badgeID}
-            className=" flex flex-col items-center">
+            src={UCI}
+            className="absolute top-[60vh] left-[5vw] object-contain w-[300px]"
+            alt="UCI"
+          />
+          <img
+            src={ErusmusUni}
+            className="absolute top-[10vh] right-[12vw] object-contain w-[400px]"
+            alt="Meta"
+          />
+
+          <img
+            data-scroll
+            data-scroll-speed="0.1"
+            src={Udemy}
+            className="absolute top-[80vh] left-[20vw] object-contain w-[200px]"
+            alt="Udemy"
+          />
+
+          <img
+            data-scroll
+            data-scroll-speed="0.1"
+            src={Google}
+            className="absolute top-[25vh] right-[2vw] object-contain w-[200px]"
+            alt="Google"
+          />
+
+          <img
+            data-scroll
+            data-scroll-speed="0.3"
+            src={CREST}
+            className="absolute top-[65vh] right-[35vw] object-contain w-[200px]"
+            alt="CREST"
+          />
+
+          <img
+            data-scroll
+            data-scroll-speed="0.2"
+            src={ATLASSIAN}
+            className="absolute top-[60vh] right-[5vw] object-contain w-[200px]"
+            alt="ATLASSIAN"
+          />
+
+          <img
+            data-scroll
+            data-scroll-speed="0.1"
+            src={ISO}
+            className="absolute top-[80vh] right-[12vw] object-contain w-[200px]"
+            alt="ISO"
+          />
+        </div>
+
+        <div data-scroll data-scroll-speed="0.1" className="mt-16">
+          <h1 className="badgeText font-bold text-5xl md:text-8xl text-center pb-5 text-white">
+            Badges That Represent Me
+          </h1>
+        </div>
+        <div
+          className={`cardContainer ${activePadding} flex justify-center gap-12`}>
+          {badgeData.map((badge) => (
             <div
-              className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} overflow-hidden cursor-pointer`}
-              onClick={() => handleBadgeClick(badge.badgeID)}>
-              <img
-                src={badge.badgeImage}
-                className="object-contain"
-                alt={badge.badgeName}
-              />
+              data-scroll
+              data-scroll-speed="0.2"
+              key={badge.badgeID}
+              className=" flex flex-col items-center">
+              <div
+                className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} overflow-hidden cursor-pointer`}
+                onClick={() => handleBadgeClick(badge.badgeID)}>
+                <img
+                  src={badge.badgeImage}
+                  className="object-contain"
+                  alt={badge.badgeName}
+                />
+              </div>
+              <h1 className="text-sky-200 font-dancing text-2xl">Click me</h1>
             </div>
-            <h1 className="text-sky-200 font-dancing text-2xl">Click me</h1>
-          </div>
-        ))}
+          ))}
+        </div>
+        {activeBadgeID &&
+          renderBadgeDetails(
+            badgeData.find((badge) => badge.badgeID === activeBadgeID)
+          )}
       </div>
-      {activeBadgeID &&
-        renderBadgeDetails(
-          badgeData.find((badge) => badge.badgeID === activeBadgeID)
-        )}
+      <div className="object-cover flex justify-center">
+      <motion.div
+                data-scroll
+                data-scroll-speed="0.1"
+      className="relative w-full mx-auto m-5 p-6 flex justify-center items-center transition-shadow duration-300"
+    >
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-slate-50 mb-1">Want to Dive Deeper?</h2>
+        <p className="text-slate-100 pb-3">
+          You've just seen a glimpse of my work through these short videos. Click the button below to explore all my projects in detail.
+        </p>
+        <motion.a
+          href="/certificates"
+          className="inline-block px-6 py-3 text-slate-800 bg-slate-300 rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          See All Certificates
+        </motion.a>
+      </div>
+    </motion.div>
+      </div>
     </div>
   );
 };
