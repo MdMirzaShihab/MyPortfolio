@@ -85,9 +85,9 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
 
   return (
     <div className={`sticky ${stick}`}>
-    <div className="group flex flex-col relative after:shadow-lg after:shadow-black mb-10">
+    <div className="group flex flex-col relative after:shadow-lg after:shadow-black mb-[20vh]">
       {/* semi hidden slide */}
-      <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[480px] rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14 border-2`}>
+      <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[480px] shadow-lg shadow-slate-600 rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14 border-2`}>
         <div className="flex flex-col gap-4">
           {/* Logo */}
           <div className="flex items-center gap-4">
@@ -99,10 +99,9 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
                 {workDetails.map((detail, index) => (
           <li key={index} className="text-slate-600 font-bold text-[16px] lg:block hidden">
             ✤ {detail}
-          </li>
+          </li> 
         ))}
             </div>
-            
           </div>
         </div>
       </div>
@@ -137,7 +136,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
 const ExperienceSection = () => {
   return (
     <div className="">
-      <h1 className="sticky top-0 font-bold text-5xl md:text-8xl p-10 py-20 text-center text-gray-800">
+      <h1 className="sticky top-0 font-bold text-5xl md:text-8xl p-10 pt-20 mb-[20vh] text-center text-gray-800">
         Professional Odyssey
       </h1>
       <div className="flex flex-col items-center justify-center">

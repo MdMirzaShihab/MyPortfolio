@@ -102,7 +102,7 @@ const ExperienceOverview = () => {
           <div className="mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden p-10 h-full">
               <div
-                className="border-2-2 border-sky-600 absolute h-full border"
+                className="border-2-2 border-[#0284c7] absolute h-full border"
                 style={{
                   right: "50%",
                   border: "4px solid #0284c7",
@@ -117,13 +117,13 @@ const ExperienceOverview = () => {
                 }}></div>
               <div className="flex justify-between mb-[6vw] ">
                 <div className="text-left">
-                  <h1 className="font-bold text-2xl lg:text-5xl text-[#0284c7]">
+                  <h1 className="font-bold shadow-xl text-2xl lg:text-5xl text-[#0284c7]">
                     Development
                   </h1>
                   <hr/>
                 </div>
                 <div className="text-right">
-                  <h1 className="font-bold text-2xl lg:text-5xl text-[#4e72c3]">
+                  <h1 className="font-bold shadow-xl text-2xl lg:text-5xl text-[#4e72c3]">
                     Research
                   </h1>
                   <hr/>

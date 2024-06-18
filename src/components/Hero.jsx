@@ -89,7 +89,7 @@ const Hero = () => {
         </p>
         <p
           id="herotext"
-          className="md:p-3 lg:ml-20 md:ml-24 ml-40 HeroDetail text-md md:text-2xl text-slate-200 text-center">
+          className="md:p-3 lg:ml-20 md:ml-24 ml-40 HeroDetail font-bold text-md md:text-2xl text-slate-300 text-center">
           I am a results-driven Software Engineer with a deep passion for
           transforming innovative ideas into real-world solutions. As a
           Certified Scrum Master (CSM), I have honed my skills in Agile

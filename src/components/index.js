@@ -14,6 +14,18 @@ import Alert from "./Alert";
 import Contact from "./Contact";
 import Projects from "./Projects";
 
+import Boipoka from "./Projects/Boipoka.jsx";
+import CEdelivery from "./Projects/CEdelivery.jsx";
+import DigBazE from "./Projects/DigBazE.jsx";
+import Exponentum from "./Projects/Exponentum.jsx";
+import FlyingFarmers from "./Projects/FlyingFarmers.jsx";
+import PDCL from "./Projects/PDCL.jsx";
+import Pogoda from "./Projects/Pogoda.jsx";
+import Sabisy from "./Projects/Sabisy.jsx";
+import Subidha from "./Projects/Subidha.jsx";
+import Trademic from "./Projects/Trademic.jsx";
+import UTMgo from "./Projects/UTMgo.jsx";
+
 export {
   Nav,
   Home,
@@ -30,4 +42,15 @@ export {
   ExperienceSection,
   Footer,
   ExperienceOverview,
+  Boipoka,
+  CEdelivery,
+  DigBazE,
+  Exponentum,
+  FlyingFarmers,
+  PDCL,
+  Pogoda,
+  Sabisy,
+  Subidha,
+  Trademic,
+  UTMgo,
 };

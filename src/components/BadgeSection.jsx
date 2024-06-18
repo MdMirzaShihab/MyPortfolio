@@ -175,6 +175,11 @@ const BadgeSection = () => {
     ? "border-[#e69305]"
     : "border-sky-200";
 
+
+    const badgeShadowColor = activeBadgeID
+    ? "hover:shadow-[#e69305]"
+    : "hover:shadow-[#0284c7]";
+
   return (
     <div style={{ backgroundColor }}>
       
@@ -260,7 +265,7 @@ const BadgeSection = () => {
               key={badge.badgeID}
               className=" flex flex-col items-center">
               <div
-                className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} overflow-hidden cursor-pointer`}
+                className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} ${badgeShadowColor} hover:shadow-lg overflow-hidden cursor-pointer`}
                 onClick={() => handleBadgeClick(badge.badgeID)}>
                 <img
                   src={badge.badgeImage}
@@ -290,7 +295,7 @@ const BadgeSection = () => {
         </p>
         <motion.a
           href="/certificates"
-          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300`}
+          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
