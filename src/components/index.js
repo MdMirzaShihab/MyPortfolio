@@ -9,6 +9,7 @@ import BadgeSection from "./BadgeSection";
 import ProjectSection from "./ProjectSection";
 import ExperienceSection from "./ExperienceSection";
 import ExperienceOverview from "./ExperienceOverview";
+import GallerySection from "./GallerySection";
 import Footer from "./Footer";
 import Alert from "./Alert";
 import Contact from "./Contact";
@@ -53,4 +54,5 @@ export {
   Subidha,
   Trademic,
   UTMgo,
+  GallerySection,
 };
