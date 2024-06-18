@@ -95,35 +95,35 @@ const ExpData = [
 const ExperienceOverview = () => {
   return (
     <div className='flex flex-col items-center'>
-       <h1 className="font-bold text-5xl md:text-8xl p-10 py-20 text-center text-gray-800">
-        Overview
+       <h1 className="font-bold text-5xl md:text-8xl p-10 py-20 text-center text-[#192f60]">
+       At A Glance
       </h1>
 <div className="ml-0 md:ml-12 lg:w-2/3">
           <div className="mx-auto w-full h-full">
             <div className="relative wrap overflow-hidden p-10 h-full">
               <div
-                className="border-2-2 border-sky-500 absolute h-full border"
+                className="border-2-2 border-sky-600 absolute h-full border"
                 style={{
                   right: "50%",
-                  border: "2px solid #060f30",
+                  border: "4px solid #0284c7",
                   borderRadius: "1%",
                 }}></div>
               <div
-                className="border-2-2 border-sky-500 absolute h-full border"
+                className="border-2-2 border-[#4e72c3] absolute h-full border"
                 style={{
                   left: "50%",
-                  border: "2px solid #060f30",
+                  border: "4px solid #4e72c3",
                   borderRadius: "1%",
                 }}></div>
-              <div className="flex justify-between px-[5vw] mb-[6vw] ">
+              <div className="flex justify-between mb-[6vw] ">
                 <div className="text-left">
-                  <h1 className="font-bold text-lg lg:text-4xl text-slate-800">
+                  <h1 className="font-bold text-2xl lg:text-5xl text-[#0284c7]">
                     Development
                   </h1>
                   <hr/>
                 </div>
                 <div className="text-right">
-                  <h1 className="font-bold text-lg lg:text-4xl text-slate-800">
+                  <h1 className="font-bold text-2xl lg:text-5xl text-[#4e72c3]">
                     Research
                   </h1>
                   <hr/>
@@ -140,16 +140,16 @@ const ExperienceOverview = () => {
                   <div className="order-1 w-5/12"></div>
                   <div
                     className={`order-1 w-5/12 px-1 py-4 ${
-                      index % 2 === 0 ? "text-right" : "text-left"
+                      index % 2 === 0 ? "text-right text-sky-600" : "text-left text-[#4e72c3]"
                     }`}>
-                    <p className="mb-3 text-base text-slate-800">
+                    <p className="mb-3 text-base">
                       {exp.duration}
                     </p>
-                    <h4 className="mb-1 font-bold text-lg md:text-2xl">
+                    <h4 className="mb-1 font-bold text-lg md:text-2xl ">
                       {exp.companyName}
                     </h4>
-                    <p className='text-sm md:text-base text-gray-800 mb-3'>{exp.technology}</p>
-                    <p className='text-sm md:text-base text-gray-800 mb-5'>{exp.location}</p>
+                    <p className='text-sm font-bold md:text-base text-gray-400 mb-3'>{exp.technology}</p>
+                    <p className='text-sm md:text-base text-gray-600 mb-5'>{exp.location}</p>
                   </div>
                 </div>
               ))}

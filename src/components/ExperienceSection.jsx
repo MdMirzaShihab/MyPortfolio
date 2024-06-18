@@ -89,7 +89,7 @@ const ExperienceCard = ({ stick, companyName, companyImg, link, supervisor, dura
       {/* semi hidden slide */}
       <div className={`relative -left-16 top-0 z-10 sm:w-[70vw] h-[480px] rounded-xl flex flex-col items-start justify-center bg-slate-300 px-5 py-3 text-base font-semibold leading-7 transition-all duration-700 group-hover:-left-14 border-2`}>
         <div className="flex flex-col gap-4">
-          {/* Logo */}Want to Dive Deeper?
+          {/* Logo */}
           <div className="flex items-center gap-4">
             <img
               src={companyImg}
