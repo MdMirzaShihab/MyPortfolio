@@ -295,7 +295,7 @@ const BadgeSection = () => {
         </p>
         <motion.a
           href="/certificates"
-          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
+          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md shadow-[#0284c7] ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

@@ -96,11 +96,11 @@ const ExperienceOverview = () => {
   return (
     <div className='flex flex-col items-center'>
        <h1 className="font-bold text-5xl md:text-8xl p-10 py-20 text-center text-[#192f60]">
-       At A Glance
+       At a Glance
       </h1>
 <div className="ml-0 md:ml-12 lg:w-2/3">
           <div className="mx-auto w-full h-full">
-            <div className="relative wrap overflow-hidden p-10 h-full">
+            <div className="relative wrap overflow-hidden pb-40 p-10 h-full">
               <div
                 className="border-2-2 border-[#0284c7] absolute h-full border"
                 style={{
@@ -117,16 +117,14 @@ const ExperienceOverview = () => {
                 }}></div>
               <div className="flex justify-between mb-[6vw] ">
                 <div className="text-left">
-                  <h1 className="font-bold shadow-xl text-2xl lg:text-5xl text-[#0284c7]">
+                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-sky-200 text-2xl lg:text-5xl text-sky-600">
                     Development
                   </h1>
-                  <hr/>
                 </div>
                 <div className="text-right">
-                  <h1 className="font-bold shadow-xl text-2xl lg:text-5xl text-[#4e72c3]">
+                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-indigo-200 text-2xl lg:text-5xl text-indigo-600">
                     Research
                   </h1>
-                  <hr/>
                 </div>
               </div>
               {sortedExpData.map((exp, index) => (
@@ -140,7 +138,7 @@ const ExperienceOverview = () => {
                   <div className="order-1 w-5/12"></div>
                   <div
                     className={`order-1 w-5/12 px-1 py-4 ${
-                      index % 2 === 0 ? "text-right text-sky-600" : "text-left text-[#4e72c3]"
+                      index % 2 === 0 ? "text-right text-sky-600" : "text-left text-indigo-600"
                     }`}>
                     <p className="mb-3 text-base">
                       {exp.duration}
