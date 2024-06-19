@@ -109,10 +109,10 @@ const ExperienceOverview = () => {
                   borderRadius: "1%",
                 }}></div>
               <div
-                className="border-2-2 border-[#4e72c3] absolute h-full border"
+                className="border-2-2 border-[#4f46e5] absolute h-full border"
                 style={{
                   left: "50%",
-                  border: "4px solid #4e72c3",
+                  border: "4px solid #4f46e5",
                   borderRadius: "1%",
                 }}></div>
               <div className="flex justify-between mb-[6vw] ">
