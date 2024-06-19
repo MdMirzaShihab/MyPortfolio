@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import React, { useEffect, useState } from "react";
 
 const Alert = () => {
@@ -6,6 +8,16 @@ const Alert = () => {
   const handleClose = () => {
     setShowAlert(false);
   };
+
+  useGSAP(() => {
+    // Typewriter effect for the 'whoIam' array
+    gsap.from(".alert-container", {
+      duration: 1,
+      delay: 3.5,
+      opacity: 0,
+    });
+  }, []);
+
 
   if (!showAlert) return null;
 
