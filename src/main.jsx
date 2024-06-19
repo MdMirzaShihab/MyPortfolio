@@ -6,7 +6,6 @@ import {
   Home,
   About,
   Certificates,
-  Experience,
   Error,
   Alert,
   Contact,
@@ -45,7 +44,6 @@ const routes = [
     children: [
       { path: "/", element: <Home /> },
       { path: "/certificates", element: <Certificates /> },
-      { path: "/experience", element: <Experience /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/projects", element: <Projects /> },

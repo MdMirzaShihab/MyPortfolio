@@ -27,7 +27,6 @@ const Nav = () => {
       </Link>
       <div className="mx-5">
         <NavLink to="/certificates">Certificates</NavLink>
-        <NavLink to="/experience">Experiences</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contacts</NavLink>

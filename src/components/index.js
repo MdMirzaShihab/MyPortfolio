@@ -3,7 +3,6 @@ import Home from "./Home";
 import Hero from "./Hero";
 import About from "./About";
 import Certificates from "./Certificates";
-import Experience from "./Experience";
 import Error from "./Error";
 import BadgeSection from "./BadgeSection";
 import ProjectSection from "./ProjectSection";
@@ -32,7 +31,6 @@ export {
   Home,
   About,
   Certificates,
-  Experience,
   Error,
   Hero,
   BadgeSection,
