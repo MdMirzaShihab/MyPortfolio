@@ -8,7 +8,7 @@ const Footer = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="bg-gray-900 text-gray-400 py-8 px-4">
-      <div className="container mx-auto flex justify-between py-8 gap-4">
+      <div className="container mx-auto flex flex-wrap justify-between py-8 gap-4">
         <div className="border-r px-4">
           <div className="flex mt-4 gap-4">
             {/* Quick Links */}
