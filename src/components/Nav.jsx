@@ -9,7 +9,7 @@ const Nav = () => {
     return (
       <Link
         to={to}
-        className={`px-4 py-2 mt-2 text-md font-semibold md:mt-0 md:ml-4 hover:text-slate-300 ${
+        className={`px-4 py-2 mt-2 text-md font-semibold md:mt-0 md:ml-4 hover:text-slate-600 ${
           location.pathname === to ? "text-sky-200" : ""
         }`}>
         {children}

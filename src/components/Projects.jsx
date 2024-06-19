@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const projectLinks = [
   {
@@ -98,29 +99,31 @@ const ProjectCard = ({ name, link, svgPath, viewBox }) => {
   };
 
   return (
-      <button
-        className="project-card group md:h-[24vw] md:w-[24vw] h-auto w-[50vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c744] transition duration-300"
-        onClick={handleCardClick}>
-        <svg
-          viewBox={viewBox}
-          className=" group-hover:text-slate-100 w-[5vw] h-[5vw]">
-          <path d={svgPath} fill="currentColor" />
-        </svg>
-        <h1 className="text-3xl font-bold group-hover:text-slate-100 mt-2">
-          {" "}
-          {name}{" "}
-        </h1>
-      </button>
+    <motion.button
+      className="project-card group md:h-[24vw] md:w-[24vw] h-[48vw] w-[48vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c786] transition duration-300"
+      onClick={handleCardClick}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}>
+      <svg
+        viewBox={viewBox}
+        className=" group-hover:text-slate-100 w-[5vw] h-[5vw] transition duration-300">
+        <path d={svgPath} fill="currentColor" />
+      </svg>
+      <h1 className="text-3xl font-bold group-hover:text-slate-100 mt-2 transition duration-300">
+        {" "}
+        {name}{" "}
+      </h1>
+    </motion.button>
   );
 };
 
 const Projects = () => {
   return (
     <div className="projects-container min-h-[100vh] bg-[#060f30] pt-16 w-full">
-                <h1 className="badgeText font-bold text-5xl md:text-8xl text-center py-5 text-white">
-            My Projects
-          </h1>
-      <div className="flex flex-wrap w-full justify-center py-5">
+      <h1 className="badgeText font-bold text-5xl md:text-8xl text-center py-5 text-white">
+        My Projects
+      </h1>
+      <div className="flex flex-wrap w-full justify-center py-10">
         {projectLinks.map((project) => (
           <div key={project.id} className="">
             <ProjectCard {...project} />
