@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Me */}
         <div>
-          <h2 className="text-lg font-semibold text-white">Contact Me</h2>
+          <h2 className="text-lg font-semibold text-white">Get In Touch</h2>
           <p className="mt-4">
             Feel free to reach out to me for collaboration, project inquiries,
             or just to connect!
@@ -55,7 +55,7 @@ const Footer = () => {
 
         {/* Social Media */}
         <div>
-          <h2 className="text-lg font-semibold text-white">Follow Me</h2>
+          <h2 className="text-lg font-semibold text-white">Catch Up with Me</h2>
           <div className="mt-4 flex space-x-4">
             <motion.a
               href="tel:+8801518990333"
