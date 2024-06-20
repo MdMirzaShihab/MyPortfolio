@@ -191,5 +191,15 @@
 }
 
 
+/* GallerySection */
 
 
+.greyscale-image {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.greyscale-image:hover {
+  filter: none;
+  transform: scale(1.05);
+}

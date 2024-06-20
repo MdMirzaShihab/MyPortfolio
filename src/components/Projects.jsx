@@ -94,15 +94,10 @@ const projectLinks = [
 ];
 
 const ProjectCard = ({ name, link, svgPath, viewBox }) => {
-  const handleCardClick = () => {
-    // Redirect to the specified link
-    window.location.href = link;
-  };
-
   return (
     <Link to={link} rel="noopener noreferrer">
       <motion.button
-        className="project-card group md:h-[24vw] md:w-[24vw] h-[48vw] w-[48vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c786] transition duration-300"
+        className="project-card group lg:w-[24vw] md:w-[32vw] h-[48vh] w-[48vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c786] transition duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}>
         <svg

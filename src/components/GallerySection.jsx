@@ -48,10 +48,10 @@ const Column = ({ images, y = 0, h }) => {
         style={{ y }}>
         {images.map((src, index) => {
           return (
-            <div key={index} className="imagecontainer w-full h-full relative">
+            <div key={index} className="imagecontainer w-full h-full relative overflow-hidden">
               <img
                 src={src}
-                className="w-full h-full rounded-xl object-cover min-w-[250px]"
+                className="greyscale-image w-full h-full rounded-xl object-cover min-w-[250px]"
                 alt="image"
               />
             </div>
