@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const projectLinks = [
@@ -99,21 +100,22 @@ const ProjectCard = ({ name, link, svgPath, viewBox }) => {
   };
 
   return (
-    <motion.button
-      className="project-card group md:h-[24vw] md:w-[24vw] h-[48vw] w-[48vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c786] transition duration-300"
-      onClick={handleCardClick}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}>
-      <svg
-        viewBox={viewBox}
-        className=" group-hover:text-slate-100 w-[5vw] h-[5vw] transition duration-300">
-        <path d={svgPath} fill="currentColor" />
-      </svg>
-      <h1 className="text-3xl font-bold group-hover:text-slate-100 mt-2 transition duration-300">
-        {" "}
-        {name}{" "}
-      </h1>
-    </motion.button>
+    <Link to={link} rel="noopener noreferrer">
+      <motion.button
+        className="project-card group md:h-[24vw] md:w-[24vw] h-[48vw] w-[48vw] text-slate-400 flex flex-col justify-center items-center hover:shadow-lg hover:shadow-[#0284c7] shadow-sm shadow-[#0285c786] transition duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}>
+        <svg
+          viewBox={viewBox}
+          className=" group-hover:text-slate-100 w-[5vw] h-[5vw] transition duration-300">
+          <path d={svgPath} fill="currentColor" />
+        </svg>
+        <h1 className="text-3xl font-bold group-hover:text-slate-100 mt-2 transition duration-300">
+          {" "}
+          {name}{" "}
+        </h1>
+      </motion.button>
+    </Link>
   );
 };
 
