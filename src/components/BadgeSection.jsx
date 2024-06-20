@@ -295,7 +295,7 @@ const BadgeSection = () => {
         Unlock the Stories Behind My Success! Each badge is a testament to my commitment and expertise. Witness the dedication and hard work that have shaped my journey.
         </p>
 
-        <Link to="/projects">
+        <Link to="/certificates">
               <motion.div
                 className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md shadow-[#0284c7] ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
                 whileHover={{ scale: 1.1 }}
