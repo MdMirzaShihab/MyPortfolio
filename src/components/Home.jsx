@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Hero,
@@ -31,6 +32,14 @@ function Home() {
             <p className="text-slate-300 mb-3">
               Click the button below to explore all my projects in detail.
             </p>
+            <Link to="/projects">
+              <motion.div
+                className="inline-block px-6 py-3 border-4 border-sky-200 text-slate-200 font-bold hover:shadow-[#0284c7] shadow-[#0284c7] shadow-md rounded-full hover:shadow-lg transition-colors duration-300"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                See All Projects
+              </motion.div>
+            </Link>
           </div>
         </motion.div>
       </div>
