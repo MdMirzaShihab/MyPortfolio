@@ -2,14 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <motion.footer
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="bg-gray-900 text-gray-400 py-8 px-4">
-      <div className="container mx-auto flex flex-wrap justify-between py-8 gap-4">
-        <div className="border-r px-4">
+      className="bg-gray-900 text-gray-400 px-4">
+      <div className="container mx-auto flex flex-wrap justify-between gap-4">
+        <div className="border-r px-4 mx-auto py-8">
           <div className="flex mt-4 gap-4">
             {/* Quick Links */}
             <div>
@@ -19,16 +23,16 @@ const Footer = () => {
               <div className="mt-4 flex justify-between">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
-                  ☺ Facilitating Continuous Improvement
+                    ☺ Facilitating Continuous Improvement
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Removing Impediments
+                    ☺ Removing Impediments
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Enhancing Communication and Collaboration
+                    ☺ Enhancing Communication and Collaboration
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Promoting Agile Best Practices
+                    ☺ Promoting Agile Best Practices
                   </p>
                 </div>
               </div>
@@ -42,16 +46,16 @@ const Footer = () => {
               <div className="mt-4 flex justify-between">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
-                  ☺ User-Centered Design
+                    ☺ User-Centered Design
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Enhanced Usability and Accessibility
+                    ☺ Enhanced Usability and Accessibility
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Innovative Solutions and Differentiation
+                    ☺ Innovative Solutions and Differentiation
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Alignment with Business Goals
+                    ☺ Alignment with Business Goals
                   </p>
                 </div>
               </div>
@@ -65,16 +69,16 @@ const Footer = () => {
               <div className="mt-4 flex justify-between">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
-                  ☺ Enhanced User Experience
+                    ☺ Enhanced User Experience
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Performance Optimization
+                    ☺ Performance Optimization
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Maintainable and Scalable Code
+                    ☺ Maintainable and Scalable Code
                   </p>
                   <p className="hover:text-white transition duration-300">
-                  ☺ Cross-Functional Collaboration
+                    ☺ Cross-Functional Collaboration
                   </p>
                 </div>
               </div>
@@ -82,16 +86,12 @@ const Footer = () => {
           </div>
         </div>
         {/* About Me */}
-        <div className="text-center my-auto">
-       
-            <h2 className="text-xl font-bold text-white">Catch Up with Me</h2>
+        <div className="text-center my-auto mx-auto py-4">
+          <h2 className="text-xl font-bold text-white">Catch Up with Me</h2>
 
-          
           <div className="flex flex-col items-center mt-2 h-full">
-          <h2 className="text-lg font-medium text-slate-200">
-              
-            </h2>
-          <p>Feel free to reach out to me for collaboration,</p>
+            <h2 className="text-lg font-medium text-slate-200"></h2>
+            <p>Feel free to reach out to me for collaboration,</p>
             <p>project inquiries, or just to connect!</p>
 
             <div className="mt-4 flex space-x-4">
@@ -149,9 +149,30 @@ const Footer = () => {
             </div>
           </div>
         </div>
+              {/* Scroll to Top Button */}
+      <div className="text-center my-auto mx-auto py-4">
+        {/* ... Your other content ... */}
+        <motion.button
+          onClick={scrollToTop}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="flex flex-col justify-center items-center font-medium px-2 rounded-xl hover:shadow-lg group hover:shadow-[#0284c7] shadow-sm shadow-[#0284c7]">
+          <svg
+            className="w-[70px] h-[70px] fill-[#8e8e8e] group-hover:fill-[#ffffff] "
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg">
+            {/*! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
+            <path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"></path>
+          </svg>
+          <h1 className="text-sm -mt-[20px] pb-[10px] group-hover:text-white ">Scroll to Top</h1>
+        </motion.button>
       </div>
+      </div>
+
+
+
       {/* Copyright */}
-      <div className="mt-8 text-center border-t border-gray-800 pt-4">
+      <div className="mt-8 text-center border-t border-gray-800 py-4">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} MD Mirza Shihab. All rights
           reserved.

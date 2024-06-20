@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import CSM from "../assets/Logos/CSM-logo.webp";
 import GPM from "../assets/Logos/GPM.webp";
 import UTM from "../assets/Logos/UTM-LOGO.webp";
@@ -293,14 +294,15 @@ const BadgeSection = () => {
         <p className="text-slate-100 pb-3">
         Unlock the Stories Behind My Success! Each badge is a testament to my commitment and expertise. Witness the dedication and hard work that have shaped my journey.
         </p>
-        <motion.a
-          href="/certificates"
-          className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md shadow-[#0284c7] ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Interested to know More?
-        </motion.a>
+
+        <Link to="/projects">
+              <motion.div
+                className={`inline-block px-6 py-3 border-4 ${badgeBorderColor} text-slate-100 font-bold rounded-full shadow-md shadow-[#0284c7] ${badgeShadowColor} hover:shadow-lg transition-colors duration-300`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
+                Interested to know More?
+              </motion.div>
+            </Link>
       </div>
     </motion.div>
       </div>
