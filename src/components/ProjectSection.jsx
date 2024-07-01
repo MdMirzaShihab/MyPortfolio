@@ -75,7 +75,7 @@ const ProjectSection = () => {
   ];
 
   return (
-    <div ref={imgContainer} className="relative h-[300vh] bg-slate-500">
+    <div ref={imgContainer} className="relative h-[300vh] bg-gradient-to-b from-[#060f30] via-purple-900 to-white">
       <div className="sticky top-16 h-[100vh] overflow-hidden">
         {projectThumbnails.map((project) => {
           return (
@@ -88,7 +88,7 @@ const ProjectSection = () => {
                   autoPlay
                   muted
                   loop
-                  className={`object-cover rounded-lg shadow-2xl`}>
+                  className={`object-cover rounded-lg shadow-lg shadow-[#0284c7] `}>
                   <source src={project.vdo} type="video/mp4" />
                 </video>
               </div>
