@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { badgeData } from "../Constants";
 import { Link } from "react-router-dom";
-import CSM from "../assets/Logos/CSM-logo.webp";
-import GPM from "../assets/Logos/GPM.webp";
-import UTM from "../assets/Logos/UTM-LOGO.webp";
 import ATLASSIAN from "../assets/Logos/ATLASSIAN.webp";
 import CREST from "../assets/Logos/CREST.webp";
 import ErusmusUni from "../assets/Logos/ErusmusUni.webp";
@@ -16,107 +14,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from 'framer-motion';
 
-const badgeData = [
-  {
-    badgeID: 1,
-    badgeName: "CSM",
-    badgeImage: CSM,
-    badgeInnertext: [
-      {
-        textTitle: "Facilitate Scrum Ceremonies: ",
-        text: "Expertly lead sprint planning, daily stand-ups, sprint reviews, and retrospectives to ensure team alignment and productivity.",
-      },
-      {
-        textTitle: "Remove Obstacles: ",
-        text: "Identify and eliminate impediments swiftly to keep the team moving forward efficiently.",
-      },
-      {
-        textTitle: "Coach and Mentor: ",
-        text: "Guide the team in self-organization, cross-functionality, and Agile best practices for continuous improvement.",
-      },
-      {
-        textTitle: "Promote Continuous Improvement: ",
-        text: "Foster a culture of continuous improvement, helping the team enhance processes and performance.",
-      },
-      {
-        textTitle: "Enhance Communication and Collaboration: ",
-        text: "Facilitate open communication and effective collaboration within the team and with stakeholders",
-      },
-      {
-        textTitle: "Certified Expertise: ",
-        text: "Leverage formal training and certification to apply Scrum principles effectively and credibly",
-      },
-    ],
-    badgeBg: "#f9b620",
-    badgeTextColor: "text-[#ffffff]",
-  },
-  {
-    badgeID: 2,
-    badgeName: "UTM",
-    badgeImage: UTM,
-    badgeInnertext: [
-      {
-        textTitle: "Global Ranking: ",
-        text: "Graduated from UTM, ranked 181st globally, ensuring a top-tier education in engineering and technology.",
-      },
-      {
-        textTitle: "Strong Technical Foundation: ",
-        text: "Developed robust software engineering skills through UTM's rigorous and comprehensive curriculum.",
-      },
-      {
-        textTitle: "Innovative Research Exposure: ",
-        text: "Gained experience in cutting-edge research projects, fostering a deep understanding of advanced technologies.",
-      },
-      {
-        textTitle: "Problem-Solving Skills: ",
-        text: "Honed critical problem-solving abilities through challenging coursework and practical applications.",
-      },
-      {
-        textTitle: "Industry-Relevant Training:",
-        text: " Received training aligned with industry standards, preparing me to meet current and future technological demands.",
-      },
-      {
-        textTitle: "Agile Project Management:",
-        text: "Combined technical expertise with certified Scrum Master skills to drive efficient and effective project delivery.",
-      },
-    ],
-    badgeBg: "#5d001d",
-    badgeTextColor: "text-[#e69305]",
-  },
-  {
-    badgeID: 3,
-    badgeName: "GPM",
-    badgeImage: GPM,
-    badgeInnertext: [
-      {
-        textTitle: "Industry-Recognized Certification: ",
-        text: "Completed the Google Project Management Professional Certificate, showcasing my expertise in project management best practices.",
-      },
-      {
-        textTitle: "Comprehensive Skill Set: ",
-        text: "Gained a deep understanding of project planning, execution, and monitoring, ensuring successful project delivery.",
-      },
-      {
-        textTitle: "Effective Communication: ",
-        text: "Learned advanced communication techniques to facilitate clear and efficient stakeholder engagement.",
-      },
-      {
-        textTitle: "Risk Management Proficiency:",
-        text: "Acquired skills in identifying, assessing, and mitigating project risks to ensure smooth project progression.",
-      },
-      {
-        textTitle: "Leadership and Team Collaboration: ",
-        text: "Enhanced leadership abilities to effectively guide teams and foster a collaborative working environment.",
-      },
-      {
-        textTitle: "Data-Driven Decision Making: ",
-        text: "Developed competencies in using data and metrics to make informed project decisions and optimize outcomes.",
-      },
-    ],
-    badgeBg: "#c36f00",
-    badgeTextColor: "text-[#ffffff]",
-  },
-];
 
 gsap.registerPlugin(ScrollTrigger);
 
