@@ -16,7 +16,6 @@ const Hero = () => {
   let titleIndex = 0;
 
   useGSAP(() => {
-    // Typewriter effect for the 'whoIam' array
     const changeTitle = () => {
       gsap.to(".title", { opacity: 0, duration: 1, onComplete: updateTitle });
     };
