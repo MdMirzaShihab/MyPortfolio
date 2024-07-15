@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="bg-[#060f30] area">
+    <div className="bg-[#060f30]">
       <div className="flex justify-center min-h-screen">
         <div
           className="hidden bg-cover lg:block lg:w-2/5"
@@ -13,18 +13,6 @@ const Contact = () => {
           }}></div>
         <div className="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
           <div className="w-full pt-20">
-             <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
             <h1 className="text-3xl font-semibold tracking-wider text-gray-200">
               Contact Me.
             </h1>
