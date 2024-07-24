@@ -75,8 +75,12 @@ const BadgeSection = () => {
 
 
     const badgeShadowColor = activeBadgeID
-    ? "hover:shadow-[#e69305]"
-    : "hover:shadow-[#0284c7]";
+    ? "shadow-[#e69305]"
+    : "shadow-[#0284c7]";
+
+    const badgeHoverColor = activeBadgeID
+    ? "hover:bg-[#e69305]"
+    : "hover:bg-sky-100";
 
   return (
     <div style={{ backgroundColor }}>
@@ -163,15 +167,16 @@ const BadgeSection = () => {
               key={badge.badgeID}
               className=" flex flex-col items-center">
               <div
-                className={`badgeCard flex w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 bg-white hover:bg-sky-100 justify-center items-center rounded-2xl border-4 ${badgeBorderColor} ${badgeShadowColor} hover:shadow-lg overflow-hidden cursor-pointer`}
+                className={`badgeCard flex flex-col gap-3 w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 ${badgeHoverColor} justify-center items-center rounded-2xl border-4 ${badgeBorderColor} hover:${badgeShadowColor} ${badgeShadowColor} hover:shadow-lg shadow-md overflow-hidden cursor-pointer transition-transform duration-700 transform hover:-translate-y-3`}
                 onClick={() => handleBadgeClick(badge.badgeID)}>
                 <img
                   src={badge.badgeImage}
                   className="object-contain"
                   alt={badge.badgeName}
                 />
+                <h1 className="text-sky-100 font-dancing text-3xl">Click me</h1>
               </div>
-              <h1 className="text-sky-200 font-dancing text-2xl">Click me</h1>
+              
             </div>
           ))}
         </div>
