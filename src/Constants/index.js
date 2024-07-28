@@ -271,6 +271,7 @@ const certData = [
     {
       badgeID: 1,
       badgeName: "CSM",
+      badgeTitle: "Certified ScrumMaster®",
       badgeImage: CSM,
       badgeInnertext: [
         {
@@ -304,6 +305,7 @@ const certData = [
     {
       badgeID: 2,
       badgeName: "UTM",
+      badgeTitle: "University Technology Malaysia",
       badgeImage: UTM,
       badgeInnertext: [
         {
@@ -337,6 +339,7 @@ const certData = [
     {
       badgeID: 3,
       badgeName: "GPM",
+      badgeTitle: "Google Project Management Certificate",
       badgeImage: GPM,
       badgeInnertext: [
         {

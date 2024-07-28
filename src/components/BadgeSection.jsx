@@ -18,7 +18,10 @@ import { motion } from 'framer-motion';
 gsap.registerPlugin(ScrollTrigger);
 
 const BadgeSection = () => {
+  const [isExpanded, setIsExpanded] = useState(null);
   const [activeBadgeID, setActiveBadgeID] = useState(null);
+
+  const toggle = () => setIsExpanded(!isExpanded);
 
   useEffect(() => {
     // If details are shown, scale down the card containers, otherwise scale them back up
@@ -83,9 +86,15 @@ const BadgeSection = () => {
     : "hover:bg-sky-100";
 
   return (
-    <div style={{ backgroundColor }}>
+
+
+    // Desktop Versiom 
+
+
+
+    <div  className="">
       
-      <div className="badgeSec p-5 " >
+      <div style={{ backgroundColor }} className="badgeSec p-5 hidden lg:block" >
         <div className="relative blur-sm">
           <img
             src={IBM}
@@ -167,7 +176,7 @@ const BadgeSection = () => {
               key={badge.badgeID}
               className=" flex flex-col items-center">
               <div
-                className={`badgeCard flex flex-col gap-3 w-[100px] h-[133px] xl:w-[300px] xl:h-[400px] p-2 ${badgeHoverColor} justify-center items-center rounded-2xl border-4 ${badgeBorderColor} hover:${badgeShadowColor} ${badgeShadowColor} hover:shadow-lg shadow-md overflow-hidden cursor-pointer transition-transform duration-700 transform hover:-translate-y-3`}
+                className={`badgeCard flex flex-col gap-3 w-[300px] h-[400px] p-2 ${badgeHoverColor} justify-center items-center rounded-2xl border-4 ${badgeBorderColor} hover:${badgeShadowColor} ${badgeShadowColor} hover:shadow-lg shadow-md overflow-hidden cursor-pointer transition-transform duration-700 transform hover:-translate-y-3`}
                 onClick={() => handleBadgeClick(badge.badgeID)}>
                 <img
                   src={badge.badgeImage}
@@ -184,7 +193,7 @@ const BadgeSection = () => {
           renderBadgeDetails(
             badgeData.find((badge) => badge.badgeID === activeBadgeID)
           )}
-      </div>
+     
       <div className="-mt-10 flex justify-center pb-10">
       <motion.div
                 data-scroll
@@ -208,6 +217,69 @@ const BadgeSection = () => {
       </div>
     </motion.div>
       </div>
+      </div>
+
+
+
+
+{/*  Mobile version */}
+
+
+
+
+
+<div className="relative lg:hidden bg-[#060f30]">
+<div
+          className={`${activePadding} flex flex-col justify-center gap-4`}>
+          {badgeData.map((badge) => (
+            <div
+              key={badge.badgeID}
+              className="flex flex-col items-center p-5">
+              <div
+                className={`badgeCard flex flex-col gap-3 w-full p-2 justify-center items-center rounded-2xl border-4 shadow-sky-100 shadow-lg overflow-hidden`}
+                >
+                <img
+                  src={badge.badgeImage}
+                  className="h-[200px] "
+                  alt={badge.badgeName}
+                />
+                <h1 className="text-white text-4xl text-center font-bold "> {badge.badgeTitle}</h1>
+                <button
+  onClick={toggle}
+  className="text-white cursor-pointer flex flex-col items-center"
+>
+<span className="text-sm">
+    {isExpanded ? 'Hide details' : 'Show details'}
+  </span>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={` ${isExpanded ? 'rotate-180' : ''} w-10`}
+    style={{ transition: 'transform 0.3s ease' }}
+  >
+    <path d="M12 22L23 11H1z" fill="currentColor" />
+  </svg>
+</button>
+{isExpanded && (
+                <div className="p-5">
+                  
+                {badge.badgeInnertext.map((inner, index) => (
+                  <ul className="py-1" key={index}>
+
+                    <li className="text-slate-200 font-semibold text-xl"> {inner.textTitle}:<span className=" font-normal text-lg text-slate-300"> {inner.text} </span> </li> 
+                  
+                  </ul>
+                ))}
+                </div>
+)}
+              </div>
+              
+            </div>
+          ))}
+        </div>
+
+
+</div>
     </div>
   );
 };
