@@ -113,17 +113,19 @@ const GallerySection = () => {
         </div>
       </div>
       <div className="lg:hidden">
+      <div  className="grid grid-cols-2">
         {
           images.map((image, index) => {
             return(
-              <div key={index} className="flex flex-wrap">
-              <img src={image} className="w-[50vw]">
+              
+              <img key={index} src={image} className="shadow-lg border border-purple-500 shadow-sky-500 object-cover">
                 
               </img>
-              </div>
+             
             )
           })
         }
+         </div>
       </div>
     </div>
   );
