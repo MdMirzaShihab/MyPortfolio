@@ -11,8 +11,8 @@ import { ExpData } from "../Constants";
 
 const ExperienceOverview = () => {
   return (
-    <div className='flex flex-col items-center'>
-       <h1 className="font-bold text-5xl md:text-8xl p-10 py-20 text-center text-[#192f60]">
+    <div className='flex flex-col items-center bg-purple-900 lg:bg-white'>
+       <h1 className="font-bold text-6xl lg:text-8xl p-10 py-20 text-center text-gray-200 lg:text-[#192f60]">
        At a Glance
       </h1>
 <div className="ml-0 md:ml-12 lg:w-2/3">
@@ -34,12 +34,12 @@ const ExperienceOverview = () => {
                 }}></div>
               <div className="flex justify-between mb-[6vw] ">
                 <div className="text-left">
-                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-sky-200 text-2xl lg:text-5xl text-sky-600">
+                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-purple-400 lg:shadow-sky-200 text-2xl lg:text-5xl text-purple-400 lg:text-sky-600">
                     Development
                   </h1>
                 </div>
                 <div className="text-right">
-                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-indigo-200 text-2xl lg:text-5xl text-indigo-600">
+                  <h1 className="font-bold shadow-xl p-4 rounded-xl shadow-purple-400 lg:shadow-indigo-200 text-2xl lg:text-5xl text-purple-400 lg:text-indigo-600">
                     Research
                   </h1>
                 </div>
@@ -55,16 +55,16 @@ const ExperienceOverview = () => {
                   <div className="order-1 w-5/12"></div>
                   <div
                     className={`order-1 w-5/12 px-1 py-4 ${
-                      index % 2 === 0 ? "text-right text-sky-600" : "text-left text-indigo-600"
+                      index % 2 === 0 ? "text-right text-sky-400 lg:text-sky-600" : "text-left text-indigo-400 lg:text-indigo-600"
                     }`}>
                     <p className="mb-3 text-base">
                       {exp.duration}
                     </p>
-                    <h4 className="mb-1 font-bold text-lg md:text-2xl ">
+                    <h4 className="mb-1 font-bold text-lg lg:text-2xl ">
                       {exp.companyName}
                     </h4>
-                    <p className='text-sm font-bold md:text-base text-gray-400 mb-3'>{exp.technology}</p>
-                    <p className='text-sm md:text-base text-gray-600 mb-5'>{exp.location}</p>
+                    <p className='text-sm font-bold md:text-base text-gray-200 lg:text-gray-400 mb-3'>{exp.technology}</p>
+                    <p className='text-sm md:text-base text-purple-300 lg:text-gray-600 mb-5'>{exp.location}</p>
                   </div>
                 </div>
               ))}

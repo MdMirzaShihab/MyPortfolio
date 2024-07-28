@@ -17,7 +17,7 @@ function Home() {
       <Hero />
       <BadgeSection />
       <ProjectSection />
-      <div className="flex justify-center">
+      <div className="flex justify-center bg-purple-900 lg:bg-white">
         <motion.div
           data-scroll
           data-scroll-speed="0.2"
