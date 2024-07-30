@@ -258,8 +258,14 @@ const ExperienceSection = () => {
           ))}
         </div>
       </div>
+
+
+      {/* mobile version */}
+
+
+
       <div className="lg:hidden bg-purple-900">
-        <h1 className="sticky top-0 font-bold text-6xl p-10 pt-20 text-center bg-purple-900 shadow-lg text-gray-200">
+        <h1 className="sticky top-0 font-bold text-6xl p-5 pt-20 text-center bg-purple-900 shadow-lg shadow-purple-500 text-gray-200">
           Professional Odyssey
         </h1>
         <div>

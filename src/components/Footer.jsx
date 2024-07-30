@@ -14,7 +14,7 @@ const Footer = () => {
       className="bg-gray-900 text-gray-400 px-4">
       <div className="container mx-auto flex flex-wrap justify-between gap-4">
         <div className="border-r px-4 mx-auto py-8">
-          <div className="flex mt-4 gap-4">
+          <div className="flex flex-wrap mt-4 gap-4">
             {/* Quick Links */}
             <div>
               <h2 className="text-lg text-center font-medium text-slate-200">
