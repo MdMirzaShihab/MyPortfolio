@@ -13,14 +13,14 @@ const Footer = () => {
       transition={{ duration: 1 }}
       className="bg-gray-900 text-gray-400 px-4">
       <div className="container mx-auto flex flex-wrap justify-between gap-4">
-        <div className="border-r px-4 mx-auto py-8">
-          <div className="flex flex-wrap mt-4 gap-4">
+        <div className="px-4 mx-auto py-8">
+          <div className="flex flex-wrap justify-start mt-4 gap-4">
             {/* Quick Links */}
             <div>
               <h2 className="text-lg text-center font-medium text-slate-200">
                 As a Scrum Master
               </h2>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
                     ☺ Facilitating Continuous Improvement
@@ -43,7 +43,7 @@ const Footer = () => {
               <h2 className="text-lg text-center font-medium text-slate-200">
                 As a Product Designer
               </h2>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
                     ☺ User-Centered Design
@@ -66,7 +66,7 @@ const Footer = () => {
               <h2 className="text-lg text-center font-medium text-slate-200">
                 As a Frontend Developer
               </h2>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex">
                 <div className="flex flex-col px-4">
                   <p className="hover:text-white transition duration-300">
                     ☺ Enhanced User Experience
