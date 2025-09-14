@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { gsap } from "gsap";
+import React, { useState, memo, useMemo } from "react";
+import { gsap } from "gsap/dist/gsap";
 import { useGSAP } from "@gsap/react";
+import { useImagePreload } from "../hooks/useImagePreload";
 import hero from "../assets/HeroImg.webp";
 import heromobile from "../assets/HomeImgMobile.webp";
 import heroImgbg1 from "../assets/HeroImgbg1.webp";
@@ -12,9 +13,13 @@ const whoIam = [
   "Aspiring Educator and Researcher",
 ];
 
-const Hero = () => {
+const Hero = memo(() => {
   const [currentTitle, setCurrentTitle] = useState(whoIam[0]);
   let titleIndex = 0;
+
+  // Preload critical images
+  const heroImages = useMemo(() => [hero, heromobile, heroImgbg1, heroImgbg2], []);
+  const { imagesLoaded } = useImagePreload(heroImages);
 
   useGSAP(() => {
     const changeTitle = () => {
@@ -130,6 +135,8 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

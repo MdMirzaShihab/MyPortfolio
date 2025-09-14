@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import LazyVideo from "./LazyVideo";
 import PDCL from "../assets/Projects/PDCL/PortfolioPDCLshort.mp4";
 import Trademic from "../assets/Projects/Trademic/Trademic.mp4";
 import Boipoka from "../assets/Projects/Boipoka/Boipoka.mp4";
@@ -10,7 +11,7 @@ import Pogoda from "../assets/Projects/Pogoda/POGODA.mp4";
 import Sabisy from "../assets/Projects/Sabisy/SABISY.mp4";
 import Subidha from "../assets/Projects/Subidha/SubidhaParkingSolution.mp4";
 
-const ProjectSection = () => {
+const ProjectSection = memo(() => {
   const imgContainer = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -95,13 +96,11 @@ const ProjectSection = () => {
                 style={{ scale: project.scale }}
                 className="el md:mt-24 mt-0">
                 <div className={`imageContainer`}>
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    className={`object-cover rounded-lg shadow-lg shadow-[#0284c7] `}>
-                    <source src={project.vdo} type="video/mp4" />
-                  </video>
+                  <LazyVideo
+                    src={project.vdo}
+                    className="object-cover rounded-lg shadow-lg shadow-[#0284c7]"
+                    title={project.title}
+                  />
                 </div>
               </motion.div>
             );
@@ -129,13 +128,11 @@ const ProjectSection = () => {
               <div
                 key={project.id}
                 className=" flex flex-col shadow-sky-300 shadow-md border-sky-200 items-center justify-center">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  className={`object-contain rounded-lg shadow-lg h-[30vh] mt-20`}>
-                  <source src={project.vdo} type="video/mp4" />
-                </video>
+                <LazyVideo
+                  src={project.vdo}
+                  className="object-contain rounded-lg shadow-lg h-[30vh] mt-20"
+                  title={project.title}
+                />
                 <p className="text-yellow-500 font-semibold p-2">
                   *{project.title}*
                 </p>
@@ -146,6 +143,8 @@ const ProjectSection = () => {
       </div>
     </div>
   );
-};
+});
+
+ProjectSection.displayName = 'ProjectSection';
 
 export default ProjectSection;

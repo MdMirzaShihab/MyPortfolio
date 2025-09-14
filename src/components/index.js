@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import Alert from "./Alert";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import LazyVideo from "./LazyVideo";
 
 import Boipoka from "./Projects/Boipoka.jsx";
 import CEdelivery from "./Projects/CEdelivery.jsx";
@@ -41,6 +42,7 @@ export {
   ExperienceSection,
   Footer,
   ExperienceOverview,
+  LazyVideo,
   Boipoka,
   CEdelivery,
   DigBazE,
